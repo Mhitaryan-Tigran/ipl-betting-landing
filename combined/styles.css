@@ -16,6 +16,59 @@ button:focus-visible {
 }
 a {
   text-decoration: none;
+  color: inherit;
+}
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+ul, ol, dl {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  display: flex;
+  flex-direction: column;
+}
+tbody {
+  display: flex;
+  flex-direction: column;
+}
+tr {
+  display: flex;
+}
+th, td {
+  text-align: left;
+  font-weight: inherit;
+}
+blockquote {
+  margin: 0;
+}
+dt, dd {
+  display: block;
+}
+figure {
+  margin: 0;
+}
+small {
+  font-size: inherit;
+}
+main {
+  display: contents;
+}
+header, footer, section, article, nav, aside {
+  display: block;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
 }
 body {
   display: flex;
@@ -2246,7 +2299,8 @@ body {
   display: flex;
   position: relative;
 }
-.section-11 .frame .div-2 {
+.section-11 .frame .div-2,
+.section-11 .frame table.div-2 {
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
@@ -2255,6 +2309,13 @@ body {
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
+}
+.section-11 .frame table.div-2 tbody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
 }
 .section-11 .frame .div-3 {
   align-items: center;
@@ -2720,6 +2781,9 @@ body {
   gap: 39px;
   position: relative;
   flex: 0 0 auto;
+}
+.section-14 .footer .navbar li {
+  display: inline-flex;
 }
 .section-14 .footer .text-wrapper-2 {
   position: relative;
