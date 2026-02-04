@@ -8,57 +8,60 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Header + Hero + TOC -->
-    <div class="header-hero">
-      <header>
-        <div class="header-hero__top">
-          <a href="/" class="logo" aria-label="IPL Betting App Home">
-            <div class="logo__icon">
-              <span class="logo__icon-text">IPL</span>
-            </div>
-            <span class="logo__text">BETTING APP</span>
-          </a>
-          <nav class="nav" aria-label="Main navigation">
-            <a href="#hero" class="nav__link nav__link--active">Home</a>
-            <a href="#download" class="nav__link">IPL Download</a>
-            <a href="#bonus" class="nav__link">Bonus</a>
-            <a href="#how-to-use" class="nav__link">How to use ?</a>
-            <a href="#reviews" class="nav__link">Reviews</a>
-            <a href="#faq" class="nav__link">FAQ</a>
-          </nav>
-          <a href="#" class="btn btn--secondary">Bet Now</a>
-        </div>
-
-        <section class="header-hero__content" id="hero" aria-labelledby="hero-title">
-          <div class="header-hero__left">
-            <div>
-              <div class="header-hero__title">
-                <h1 id="hero-title" class="heading heading--3xl">Best IPL Betting App</h1>
-              </div>
-              <p class="text">
-                Cricket betting is fun and exciting and the IPL is the world's most exciting<br />T20 league. Bet
-                money online on your favorite teams and players at the world's best IPL betting app. Our feature-rich
-                app works on both Android
-              </p>
-            </div>
-            <div class="header-hero__cta">
-              <a href="#" class="btn btn--primary btn--wide">Bet Now</a>
-            </div>
-            <div class="header-hero__social">
-              <div class="avatars" aria-hidden="true">
-                <img class="avatars__item" src="img/Ellipse 982.png" alt="" />
-                <img class="avatars__item" src="img/Ellipse 983.png" alt="" />
-                <img class="avatars__item" src="img/Ellipse 985.png" alt="" />
-                <img class="avatars__item" src="img/Ellipse 984.png" alt="" />
-                <div class="avatars__more">+12k</div>
-              </div>
-              <p class="text">12k + People Already Joined IPL Betting<br />Get Started Today !</p>
-            </div>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__inner">
+        <a href="/" class="logo" aria-label="IPL Betting App Home">
+          <div class="logo__icon">
+            <span class="logo__icon-text">IPL</span>
           </div>
-          <img class="header-hero__image" src="img/Frame 452656503.png" alt="IPL Betting App interface preview" />
-        </section>
-      </header>
+          <span class="logo__text">BETTING APP</span>
+        </a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#hero" class="nav__link nav__link--active">Home</a>
+          <a href="#download" class="nav__link">IPL Download</a>
+          <a href="#bonus" class="nav__link">Bonus</a>
+          <a href="#how-to-use" class="nav__link">How to use?</a>
+          <a href="#reviews" class="nav__link">Reviews</a>
+          <a href="#faq" class="nav__link">FAQ</a>
+        </nav>
+        <a href="#" class="btn btn--secondary">Bet Now</a>
+      </div>
+    </header>
 
+    <main>
+      <!-- Hero -->
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <div class="hero__left">
+          <div>
+            <div class="hero__title">
+              <h1 id="hero-title" class="heading heading--3xl">Best IPL Betting App</h1>
+            </div>
+            <p class="text">
+              Cricket betting is fun and exciting and the IPL is the world's most exciting<br />T20 league. Bet
+              money online on your favorite teams and players at the world's best IPL betting app. Our feature-rich
+              app works on both Android
+            </p>
+          </div>
+          <div class="hero__cta">
+            <a href="#" class="btn btn--primary btn--wide">Bet Now</a>
+          </div>
+          <div class="hero__social">
+            <div class="avatars" aria-hidden="true">
+              <img class="avatars__item" src="img/Ellipse 982.png" alt="" />
+              <img class="avatars__item" src="img/Ellipse 983.png" alt="" />
+              <img class="avatars__item" src="img/Ellipse 985.png" alt="" />
+              <div class="avatars__item avatars__item--overlay" data-text="+12k">
+                <img src="img/Ellipse 984.png" alt="" />
+              </div>
+            </div>
+            <p class="text">12k + People Already Joined IPL Betting<br />Get Started Today !</p>
+          </div>
+        </div>
+        <img class="hero__image" src="img/Frame 452656503.png" alt="IPL Betting App interface preview" />
+      </section>
+
+      <!-- TOC -->
       <nav class="toc" aria-label="Table of contents">
         <div class="toc__header">
           <h2 class="heading heading--xl toc__title">Table of Contents</h2>
@@ -72,19 +75,8 @@
             <a href="#bonus" class="chip chip--light">Welcome Bonus</a>
             <a href="#reasons" class="chip chip--light">Reasons to Download</a>
           </li>
-          <li class="toc__row">
-            <a href="#features" class="chip chip--light">IPL mobile features</a>
-            <a href="#how-to-use" class="chip chip--light">How to use ?</a>
-            <a href="#reviews" class="chip chip--light">Reviews</a>
-            <a href="#info" class="chip chip--light">Main information</a>
-            <a href="#prediction" class="chip chip--light">IPL prediction app</a>
-            <a href="#faq" class="chip chip--light">FAQ</a>
-          </li>
         </ul>
       </nav>
-    </div>
-
-    <main>
       <!-- IPL Slider -->
       <section class="ipl-slider" id="ipl" aria-labelledby="ipl-title">
         <div class="ipl-slider__inner">
@@ -400,30 +392,42 @@
       <!-- App Features -->
       <section class="app-features" id="features" aria-labelledby="features-title">
         <div class="app-features__inner">
-          <figure class="features-visual">
-            <div class="features-visual__bg"></div>
-            <div class="features-visual__badge features-visual__badge--support">
-              <div>
-                <span class="features-visual__badge-label">Support</span>
-                <strong class="features-visual__badge-value">24/7 support</strong>
+          <figure class="app-features__visual">
+            <div class="app-features__ellipse"></div>
+            <div class="app-features__badge app-features__badge--support">
+              <div class="app-features__badge-line"></div>
+              <div class="app-features__badge-text">
+                <span class="app-features__badge-title">Support</span>
+                <span class="app-features__badge-value">24/7 support</span>
               </div>
-              <img src="img/vector.svg" alt="" aria-hidden="true" />
+              <div class="app-features__badge-icon">
+                <img src="img/vector.svg" alt="" />
+              </div>
             </div>
-            <div class="features-visual__badge features-visual__badge--game">
-              <div>
-                <span class="features-visual__badge-label">IPL Game</span>
-                <strong class="features-visual__badge-value">Best bets IPL</strong>
+            <div class="app-features__badge app-features__badge--game">
+              <div class="app-features__badge-line"></div>
+              <div class="app-features__badge-text">
+                <span class="app-features__badge-title">IPL Game</span>
+                <span class="app-features__badge-value">Best bets IPL</span>
               </div>
-              <img src="img/vector-1.svg" alt="" aria-hidden="true" />
+              <div class="app-features__badge-icon">
+                <img src="img/vector-1.svg" alt="" />
+              </div>
             </div>
-            <img class="features-visual__phone features-visual__phone--back" src="img/apple-iphone-15-pro-2023-medium-2.png" alt="" aria-hidden="true" />
-            <img class="features-visual__phone features-visual__phone--front" src="img/apple-iphone-15-pro-2023-medium-4.png" alt="iPhone showing IPL betting app" />
-            <div class="features-visual__badge features-visual__badge--tips">
-              <div>
-                <span class="features-visual__badge-label">Cricket Tips</span>
-                <strong class="features-visual__badge-value">It offers cricket</strong>
+            <div class="app-features__phones">
+              <div class="app-features__phone-shadow"></div>
+              <img class="app-features__phone app-features__phone--front" src="img/apple-iphone-15-pro-2023-medium-4.png" alt="iPhone showing IPL betting app" />
+              <img class="app-features__phone app-features__phone--back" src="img/apple-iphone-15-pro-2023-medium-2.png" alt="" />
+            </div>
+            <div class="app-features__badge app-features__badge--tips">
+              <div class="app-features__badge-line"></div>
+              <div class="app-features__badge-text">
+                <span class="app-features__badge-title">Cricket Tips</span>
+                <span class="app-features__badge-value">It offers cricket</span>
               </div>
-              <img src="img/vector-2-s7.svg" alt="" aria-hidden="true" />
+              <div class="app-features__badge-icon">
+                <img src="img/vector-2.svg" alt="" />
+              </div>
             </div>
           </figure>
           <article class="app-features__content">
@@ -435,18 +439,18 @@
               anywhere. Enjoy features like secure transactions, detailed match statistics and personalized
               notifications for an immersive and hassle-free betting experience on the go.
             </p>
-            <ul class="feature-list">
-              <li class="feature-list__item">
-                <span class="feature-list__icon"><img src="img/vector-5.svg" alt="" /></span>
-                <p class="feature-list__text">You can place bets on IPL games. You can also play casino games.</p>
+            <ul class="app-features__list">
+              <li class="app-features__list-item">
+                <span class="app-features__check"><img src="img/vector-5.svg" alt="" /></span>
+                <span class="app-features__list-text">You can place bets on IPL games. You can also play casino games.</span>
               </li>
-              <li class="feature-list__item">
-                <span class="feature-list__icon"><img src="img/vector-5.svg" alt="" /></span>
-                <p class="feature-list__text">It offers cricket tips, stats, and predictions.</p>
+              <li class="app-features__list-item">
+                <span class="app-features__check"><img src="img/vector-5.svg" alt="" /></span>
+                <span class="app-features__list-text">It offers cricket tips, stats, and predictions.</span>
               </li>
-              <li class="feature-list__item">
-                <span class="feature-list__icon"><img src="img/vector-5.svg" alt="" /></span>
-                <p class="feature-list__text">There is customer support for your convenience.</p>
+              <li class="app-features__list-item">
+                <span class="app-features__check"><img src="img/vector-5.svg" alt="" /></span>
+                <span class="app-features__list-text">There is customer support for your convenience.</span>
               </li>
             </ul>
             <a href="#" class="btn btn--primary">Bet Now</a>
@@ -465,7 +469,7 @@
               <dt class="accordion__header">
                 <h3 class="accordion__title">How to sign up in the app?</h3>
                 <button class="accordion__icon" aria-label="Expand section" aria-expanded="true">
-                  <img src="img/vector-2-s8.svg" alt="" />
+                  <img src="img/vector-3-s6.svg" alt="" />
                 </button>
               </dt>
               <dd class="accordion__body">
@@ -478,7 +482,7 @@
               <dt class="accordion__header">
                 <h3 class="accordion__title">How to deposit money in the app?</h3>
                 <button class="accordion__icon" aria-label="Expand section" aria-expanded="true">
-                  <img src="img/vector-2-s8.svg" alt="" />
+                  <img src="img/vector-3-s6.svg" alt="" />
                 </button>
               </dt>
               <dd class="accordion__body">
@@ -491,7 +495,7 @@
               <dt class="accordion__header">
                 <h3 class="accordion__title">How to find IPL matches to bet?</h3>
                 <button class="accordion__icon" aria-label="Expand section" aria-expanded="true">
-                  <img src="img/vector-2-s8.svg" alt="" />
+                  <img src="img/vector-3-s6.svg" alt="" />
                 </button>
               </dt>
               <dd class="accordion__body">
@@ -508,169 +512,239 @@
       </section>
 
       <!-- Reviews -->
-      <section class="reviews-section" id="reviews" aria-labelledby="reviews-title">
-        <header class="reviews-section__header">
+      <section class="reviews" id="reviews" aria-labelledby="reviews-title">
+        <header class="reviews__header">
           <h2 id="reviews-title" class="heading heading--2xl">IPL Betting App Reviews</h2>
-          <nav class="reviews-section__nav" aria-label="Reviews slider navigation">
-            <button class="slider__btn" aria-label="Previous review">
+          <div class="reviews__nav">
+            <button class="reviews__nav-btn" aria-label="Previous review">
               <img src="img/group-85026.svg" alt="" />
             </button>
-            <button class="slider__btn" aria-label="Next review">
+            <button class="reviews__nav-btn" aria-label="Next review">
               <img src="img/group-85027.svg" alt="" />
             </button>
-          </nav>
+          </div>
         </header>
-        <div class="reviews-section__cards">
-          <article class="review-card">
-            <img class="review-card__avatar" src="img/rectangle-8947.svg" alt="Rajesh K" />
-            <div class="review-card__content">
-              <header class="review-card__header">
-                <h3 class="review-card__name">Rajesh K</h3>
-                <div class="review-card__rating" role="img" aria-label="4 out of 5 stars">
-                  <img class="review-card__star" src="img/star-24-1.svg" alt="" />
-                  <img class="review-card__star" src="img/star-24-1.svg" alt="" />
-                  <img class="review-card__star" src="img/star-24-1.svg" alt="" />
-                  <img class="review-card__star" src="img/star-24-1.svg" alt="" />
-                  <img class="review-card__star" src="img/star-25.svg" alt="" />
+        <div class="reviews__slider" data-reviews-slider>
+          <div class="reviews__track">
+            <article class="review-card">
+              <img class="review-card__avatar" src="img/rectangle-8947.svg" alt="" />
+              <div class="review-card__content">
+                <div class="review-card__header">
+                  <h3 class="review-card__name">Rajesh K</h3>
+                  <div class="review-card__rating">
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-25.svg" alt="" />
+                  </div>
                 </div>
-              </header>
-              <blockquote class="review-card__text">
-                I've tried several betting apps, but this one stands out. The live betting feature is excellent, and the
-                customer support is responsive. Great bonuses too. Very satisfied!
-              </blockquote>
-            </div>
-          </article>
-          <article class="review-card">
-            <img class="review-card__avatar" src="img/rectangle-8947-1.svg" alt="Priya S" />
-            <div class="review-card__content">
-              <header class="review-card__header">
-                <h3 class="review-card__name">Priya S</h3>
-                <div class="review-card__rating" role="img" aria-label="5 out of 5 stars">
-                  <img class="review-card__star" src="img/star-24-1.svg" alt="" />
-                  <img class="review-card__star" src="img/star-24-1.svg" alt="" />
-                  <img class="review-card__star" src="img/star-24-1.svg" alt="" />
-                  <img class="review-card__star" src="img/star-24-1.svg" alt="" />
-                  <img class="review-card__star" src="img/star-24-1.svg" alt="" />
+                <p class="review-card__text">
+                  I've tried several betting apps, but this one stands out. The live betting feature is excellent, and the
+                  customer support is responsive. Great bonuses too. Very satisfied!
+                </p>
+              </div>
+            </article>
+            <article class="review-card">
+              <img class="review-card__avatar" src="img/rectangle-8947-1.svg" alt="" />
+              <div class="review-card__content">
+                <div class="review-card__header">
+                  <h3 class="review-card__name">Priya S</h3>
+                  <div class="review-card__rating">
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-24-1.svg" alt="" />
+                  </div>
                 </div>
-              </header>
-              <blockquote class="review-card__text">
-                The IPL betting app is fantastic! The interface is user-friendly, and the odds are competitive. I
-                appreciate the fast payouts and seamless betting experience. Highly recommended
-              </blockquote>
-            </div>
-          </article>
+                <p class="review-card__text">
+                  The IPL betting app is fantastic! The interface is user-friendly, and the odds are competitive. I
+                  appreciate the fast payouts and seamless betting experience. Highly recommended!
+                </p>
+              </div>
+            </article>
+            <article class="review-card">
+              <div class="review-card__avatar review-card__avatar--placeholder"></div>
+              <div class="review-card__content">
+                <div class="review-card__header">
+                  <h3 class="review-card__name">Amit P</h3>
+                  <div class="review-card__rating">
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-24-1.svg" alt="" />
+                  </div>
+                </div>
+                <p class="review-card__text">
+                  Best cricket betting app I've used! The live statistics and match predictions are incredibly accurate.
+                  Withdrawals are processed within hours. Definitely my go-to app for IPL season.
+                </p>
+              </div>
+            </article>
+            <article class="review-card">
+              <div class="review-card__avatar review-card__avatar--placeholder"></div>
+              <div class="review-card__content">
+                <div class="review-card__header">
+                  <h3 class="review-card__name">Vikram M</h3>
+                  <div class="review-card__rating">
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-25.svg" alt="" />
+                  </div>
+                </div>
+                <p class="review-card__text">
+                  Amazing app with great features! The welcome bonus was generous and the live betting options during
+                  IPL matches are unmatched. Customer service resolved my query in minutes.
+                </p>
+              </div>
+            </article>
+            <article class="review-card">
+              <div class="review-card__avatar review-card__avatar--placeholder"></div>
+              <div class="review-card__content">
+                <div class="review-card__header">
+                  <h3 class="review-card__name">Sanjay R</h3>
+                  <div class="review-card__rating">
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-24-1.svg" alt="" />
+                  </div>
+                </div>
+                <p class="review-card__text">
+                  Smooth experience from start to finish. Registration was quick, deposits are instant, and the app
+                  never lags during live matches. The odds are always competitive. Five stars!
+                </p>
+              </div>
+            </article>
+            <article class="review-card">
+              <div class="review-card__avatar review-card__avatar--placeholder"></div>
+              <div class="review-card__content">
+                <div class="review-card__header">
+                  <h3 class="review-card__name">Neha T</h3>
+                  <div class="review-card__rating">
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-24-1.svg" alt="" />
+                    <img src="img/star-25.svg" alt="" />
+                  </div>
+                </div>
+                <p class="review-card__text">
+                  Finally found a reliable betting app! The UI is clean and intuitive. Love the detailed match analysis
+                  and tips section. Makes betting on IPL matches so much more enjoyable.
+                </p>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <!-- Platforms -->
+      <!-- Platforms (Android & IOS) -->
       <section class="platforms" id="platforms" aria-labelledby="platforms-title">
-        <header>
-          <h2 id="platforms-title" class="heading heading--2xl">Download IPL win app<br />for Android &amp; IOS</h2>
+        <header class="platforms__header">
+          <h2 id="platforms-title" class="heading heading--2xl">Download IPL win app<br>for Android & IOS</h2>
         </header>
-        <figure>
-          <img class="platforms__image" src="img/frame-452656395.svg" alt="Download IPL app for Android and iOS" />
-        </figure>
+        <img class="platforms__image" src="img/frame-452656395.svg" alt="Download on App Store and Google Play" />
       </section>
 
-      <!-- Info Table -->
-      <section class="info-section" id="info" aria-labelledby="info-title">
-        <div class="info-section__inner">
-          <header>
-            <h2 id="info-title" class="heading heading--2xl">Cricket betting App main information</h2>
+      <!-- Information Table -->
+      <section class="info-table" id="info" aria-labelledby="info-title">
+        <div class="info-table__inner">
+          <header class="info-table__header">
+            <h2 id="info-title" class="heading heading--2xl heading--light">Cricket betting App main information</h2>
           </header>
-          <div class="info-table">
-            <div class="info-table__row">
-              <span class="info-table__label">Mobile platform</span>
-              <span class="info-table__value">Android</span>
-              <span class="info-table__number">1</span>
-            </div>
-            <div class="info-table__row">
-              <span class="info-table__label">Region</span>
-              <span class="info-table__value">India</span>
-              <span class="info-table__number">2</span>
-            </div>
-            <div class="info-table__row">
-              <span class="info-table__label">Language</span>
-              <span class="info-table__value">English, Hindi, Bengali, Telugu, Marathi, Tamil</span>
-              <span class="info-table__number">3</span>
-            </div>
-            <div class="info-table__row">
-              <span class="info-table__label">Bonus</span>
-              <span class="info-table__value">Welcome bonus</span>
-              <span class="info-table__number">4</span>
-            </div>
-            <div class="info-table__row">
-              <span class="info-table__label">Casino games</span>
-              <span class="info-table__value">Many real cash casino games</span>
-              <span class="info-table__number">5</span>
-            </div>
-            <div class="info-table__row">
-              <span class="info-table__label">Withdrawal</span>
-              <span class="info-table__value">Instant</span>
-              <span class="info-table__number">6</span>
+          <div class="info-table__content">
+            <div class="info-table__rows">
+              <div class="info-table__row">
+                <div class="info-table__label">Mobile platform</div>
+                <div class="info-table__value">Android</div>
+                <div class="info-table__number">1</div>
+              </div>
+              <div class="info-table__row">
+                <div class="info-table__label">Region</div>
+                <div class="info-table__value">India</div>
+                <div class="info-table__number">2</div>
+              </div>
+              <div class="info-table__row">
+                <div class="info-table__label">Language</div>
+                <div class="info-table__value">English, Hindi, Bengali, Telugu, Marathi, Tamil</div>
+                <div class="info-table__number">3</div>
+              </div>
+              <div class="info-table__row">
+                <div class="info-table__label">Bonus</div>
+                <div class="info-table__value">Welcome bonus</div>
+                <div class="info-table__number">4</div>
+              </div>
+              <div class="info-table__row">
+                <div class="info-table__label">Casino games</div>
+                <div class="info-table__value">Many real cash casino games</div>
+                <div class="info-table__number">5</div>
+              </div>
+              <div class="info-table__row">
+                <div class="info-table__label">Withdrawal</div>
+                <div class="info-table__value">Instant</div>
+                <div class="info-table__number">6</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Prediction -->
-      <section class="prediction" id="prediction" aria-labelledby="prediction-title">
-        <div class="prediction__inner">
-          <header class="prediction__header">
-            <h2 id="prediction-title" class="heading heading--2xl">How to download the<br />IPL prediction app?</h2>
+      <!-- How To Download -->
+      <section class="how-to-download" id="download" aria-labelledby="download-title">
+        <div class="how-to-download__inner">
+          <header class="how-to-download__header">
+            <h2 id="download-title" class="heading heading--2xl">How to download the<br>IPL prediction app?</h2>
             <p class="text">
               The IPL betting app offers a user-friendly mobile interface that allows users to place bets anytime,
               anywhere. Enjoy features like secure transactions, detailed match
             </p>
           </header>
-          <div class="prediction__cards">
-            <article class="prediction__card">
-              <figure>
-                <img class="prediction__card-image" src="img/frame-452656500.svg" alt="Android download" />
-              </figure>
-              <div class="prediction__card-content">
-                <header>
-                  <h3 class="heading heading--lg">How to download betting app on android?</h3>
-                </header>
+          <div class="how-to-download__cards">
+            <article class="download-card">
+              <img class="download-card__image" src="img/frame-452656500.svg" alt="Android app screenshot" />
+              <div class="download-card__content">
+                <h3 class="heading heading--xl">How to download betting app on android?</h3>
                 <p class="text">
                   The IPL betting app offers a user-friendly mobile interface that allows users to place bets anytime,
                   anywhere. Enjoy features like secure transactions, detailed match statistics and personalized
                   notifications for an immersive and hassle-free betting experience on the go.
                 </p>
-                <a href="#" class="btn btn--primary">Bet Now</a>
+                <a href="#" class="btn btn--primary btn--wide">Bet Now</a>
               </div>
             </article>
-            <article class="prediction__card prediction__card--reverse">
-              <div class="prediction__card-content">
-                <header>
-                  <h3 class="heading heading--lg">How to download an online ipl cricket app on IOS?</h3>
-                </header>
+            <article class="download-card download-card--reverse">
+              <div class="download-card__content">
+                <h3 class="heading heading--xl">How to download an online ipl cricket app on IOS?</h3>
                 <p class="text">
                   All you have to do is just open the site on your phone. Sign up, confirm, and you are ready to place
                   the bets.
                 </p>
-                <a href="#" class="btn btn--primary">Bet Now</a>
+                <a href="#" class="btn btn--primary btn--wide">Bet Now</a>
               </div>
-              <figure>
-                <img class="prediction__card-image" src="img/frame-452656501.png" alt="iOS download" />
-              </figure>
+              <img class="download-card__image" src="img/frame-452656501.png" alt="iOS app screenshot" />
             </article>
           </div>
         </div>
       </section>
 
       <!-- FAQ -->
-      <section class="faq-section" id="faq" aria-labelledby="faq-title">
-        <div class="faq-section__inner">
-          <header>
+      <section class="faq" id="faq" aria-labelledby="faq-title">
+        <div class="faq__inner">
+          <header class="faq__header">
             <h2 id="faq-title" class="heading heading--2xl">FAQ</h2>
           </header>
           <dl class="accordion">
             <div class="accordion__item">
               <dt class="accordion__header">
-                <h3 class="accordion__title">How to sign up in the app?</h3>
-                <button class="accordion__icon" aria-label="Expand answer" aria-expanded="true">
-                  <img src="img/vector-3-s13.svg" alt="" />
+                <span class="accordion__title">How to sign up in the app?</span>
+                <button class="accordion__icon" aria-expanded="false" aria-label="Toggle answer">
+                  <img src="img/vector-3-s6.svg" alt="" />
                 </button>
               </dt>
               <dd class="accordion__body">
@@ -681,41 +755,41 @@
             </div>
             <div class="accordion__item">
               <dt class="accordion__header">
-                <h3 class="accordion__title">How to deposit money?</h3>
-                <button class="accordion__icon" aria-label="Expand answer" aria-expanded="true">
-                  <img src="img/vector-3-s13.svg" alt="" />
+                <span class="accordion__title">How to deposit money?</span>
+                <button class="accordion__icon" aria-expanded="false" aria-label="Toggle answer">
+                  <img src="img/vector-3-s6.svg" alt="" />
                 </button>
               </dt>
               <dd class="accordion__body">
-                Click on the app. Next, fill out the two-step registration form. Enter your phone number and create your
-                password. A code will be sent to your phone. Verify by entering this code. Click "Next" and you are
-                ready for online betting.
+                Go to the "Wallet" section in the app. Select your preferred payment method from the available options
+                including UPI, Net Banking, or Card payments. Enter the amount you wish to deposit and confirm the
+                transaction. Funds are usually credited instantly.
               </dd>
             </div>
             <div class="accordion__item">
               <dt class="accordion__header">
-                <h3 class="accordion__title">How to withdraw money?</h3>
-                <button class="accordion__icon" aria-label="Expand answer" aria-expanded="true">
-                  <img src="img/vector-3-s13.svg" alt="" />
+                <span class="accordion__title">How to withdraw winnings?</span>
+                <button class="accordion__icon" aria-expanded="false" aria-label="Toggle answer">
+                  <img src="img/vector-3-s6.svg" alt="" />
                 </button>
               </dt>
               <dd class="accordion__body">
-                Click on the app. Next, fill out the two-step registration form. Enter your phone number and create your
-                password. A code will be sent to your phone. Verify by entering this code. Click "Next" and you are
-                ready for online betting.
+                Navigate to the "Withdraw" section in your wallet. Enter the amount you want to withdraw and select your
+                preferred withdrawal method. Complete the verification if required. Withdrawals are processed within 24
+                hours and transferred directly to your bank account.
               </dd>
             </div>
             <div class="accordion__item">
               <dt class="accordion__header">
-                <h3 class="accordion__title">Is the app safe?</h3>
-                <button class="accordion__icon" aria-label="Expand answer" aria-expanded="true">
-                  <img src="img/vector-3-s13.svg" alt="" />
+                <span class="accordion__title">Is the app safe and secure?</span>
+                <button class="accordion__icon" aria-expanded="false" aria-label="Toggle answer">
+                  <img src="img/vector-3-s6.svg" alt="" />
                 </button>
               </dt>
               <dd class="accordion__body">
-                Click on the app. Next, fill out the two-step registration form. Enter your phone number and create your
-                password. A code will be sent to your phone. Verify by entering this code. Click "Next" and you are
-                ready for online betting.
+                Yes, the app uses advanced encryption technology to protect your personal and financial information. All
+                transactions are secured with SSL encryption, and we follow strict privacy policies to ensure your data
+                is never shared with third parties.
               </dd>
             </div>
           </dl>
@@ -725,31 +799,42 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="footer__top"></div>
-      <div class="footer__bottom">
-        <p class="footer__copyright"><small>Odds96 © 2024. All rights reserved.</small></p>
-      </div>
-      <div class="footer__content">
-        <div class="footer__brand">
-          <img src="img/frame-84953.svg" alt="Odds96 logo" />
-          <p class="footer__tagline">Best betting in India Lorem ipsum dolor sit amet</p>
+      <div class="footer__main">
+        <div class="footer__content">
+          <div class="footer__brand">
+            <div class="footer__socials">
+              <a href="#" class="footer__social" aria-label="Telegram">
+                <img src="img/ri_facebook-fill.svg" alt="facebook" />
+              </a>
+              <a href="#" class="footer__social" aria-label="Twitter">
+                <img src="img/mingcute_telegram-fill.svg" alt="telegram" />
+              </a>
+              <a href="#" class="footer__social" aria-label="Instagram">
+                <img src="img/mdi_twitter.svg" alt="twitter" />
+              </a>
+              <a href="#" class="footer__social" aria-label="Facebook">
+                <img src="img/ant-design_instagram-filled.svg" alt="instagram" />
+              </a>
+            </div>
+            <p class="footer__tagline">Best betting in India Lorem ipsum dolor sit amet</p>
+          </div>
+          <nav class="footer__nav">
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">Odds96</a></li>
+              <li><a href="#" class="footer__link">Casino</a></li>
+              <li><a href="#" class="footer__link">Aviator</a></li>
+              <li><a href="#" class="footer__link">Cricket</a></li>
+              <li><a href="#" class="footer__link">Bonuses</a></li>
+              <li><a href="#" class="footer__link">App</a></li>
+            </ul>
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">Reviews</a></li>
+              <li><a href="#" class="footer__link">Legal</a></li>
+              <li><a href="#" class="footer__link">Support</a></li>
+              <li><a href="#" class="footer__link">Help</a></li>
+            </ul>
+          </nav>
         </div>
-        <nav class="footer__nav" aria-label="Footer navigation">
-          <ul class="footer__nav-list">
-            <li><a href="#" class="footer__nav-link">Odds96</a></li>
-            <li><a href="#" class="footer__nav-link">Casino</a></li>
-            <li><a href="#" class="footer__nav-link">Aviator</a></li>
-            <li><a href="#" class="footer__nav-link">Cricket</a></li>
-            <li><a href="#" class="footer__nav-link">Bonuses</a></li>
-            <li><a href="#" class="footer__nav-link">App</a></li>
-          </ul>
-          <ul class="footer__nav-list">
-            <li><a href="#" class="footer__nav-link">Reviews</a></li>
-            <li><a href="#" class="footer__nav-link">Legal</a></li>
-            <li><a href="#" class="footer__nav-link">Support</a></li>
-            <li><a href="#" class="footer__nav-link">Help</a></li>
-          </ul>
-        </nav>
       </div>
     </footer>
 
@@ -825,6 +910,72 @@
 
         track?.addEventListener('scroll', updateButtons);
         updateButtons();
+      });
+
+      // Reviews slider functionality
+      const reviewsSlider = document.querySelector('[data-reviews-slider]');
+      if (reviewsSlider) {
+        const track = reviewsSlider.querySelector('.reviews__track');
+        const cards = reviewsSlider.querySelectorAll('.review-card');
+        const section = reviewsSlider.closest('.reviews');
+        const prevBtn = section.querySelector('.reviews__nav-btn:first-child');
+        const nextBtn = section.querySelector('.reviews__nav-btn:last-child');
+
+        const cardWidth = 658;
+        const gap = 20;
+        const totalCards = cards.length;
+        let currentIndex = 0;
+        const maxIndex = Math.ceil(totalCards / 2) - 1;
+
+        function updateSlider() {
+          const offset = currentIndex * (cardWidth + gap) * 2;
+          track.style.transform = `translateX(-${offset}px)`;
+
+          if (prevBtn) prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
+          if (nextBtn) nextBtn.style.opacity = currentIndex >= maxIndex ? '0.5' : '1';
+        }
+
+        prevBtn?.addEventListener('click', () => {
+          if (currentIndex > 0) {
+            currentIndex--;
+            updateSlider();
+          }
+        });
+
+        nextBtn?.addEventListener('click', () => {
+          if (currentIndex < maxIndex) {
+            currentIndex++;
+            updateSlider();
+          }
+        });
+
+        updateSlider();
+      }
+
+      // Accordion functionality
+      const accordionItems = document.querySelectorAll('.accordion__item');
+      accordionItems.forEach((item) => {
+        // Close all by default
+        item.classList.add('accordion__item--closed');
+        const btn = item.querySelector('.accordion__icon');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+
+        // Click anywhere on item to toggle
+        item.addEventListener('click', () => {
+          const isOpen = !item.classList.contains('accordion__item--closed');
+          const btn = item.querySelector('.accordion__icon');
+
+          if (isOpen) {
+            item.classList.add('accordion__item--closed');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+          } else {
+            item.classList.remove('accordion__item--closed');
+            if (btn) btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+
+        // Make item clickable with cursor pointer
+        item.style.cursor = 'pointer';
       });
     });
     </script>
