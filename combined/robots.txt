@@ -1,7 +1,4 @@
-# robots.txt for IPL Betting App
-
 User-agent: *
 Allow: /
 
-# Sitemap location
 Sitemap: https://example.com/sitemap.xml

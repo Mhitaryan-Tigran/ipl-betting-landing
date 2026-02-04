@@ -4,23 +4,57 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Static HTML/CSS landing page exported from Figma, organized into 14 numbered section folders (1-14) that combine to form a complete page.
+Static HTML/CSS landing page for IPL betting app. Originally exported from Figma as 14 numbered section folders, now assembled into a single page in `combined/`.
 
 ## Architecture
 
-Each section folder contains:
-- `index.html` - Section markup
-- `style.css` - Section-specific styles
-- `styleguide.css` - Design tokens (colors, typography CSS variables)
+### Source Sections (1-14 folders)
+Original Figma exports. Each folder contains:
+- `index.html` - Section markup with auto-generated class names
+- `style.css` - Section styles with percentage-based positioning
+- `styleguide.css` - Design tokens
 - `globals.css` - CSS reset
 - `img/` - Section images
 
-## Design System
+### Combined Page (`combined/`)
+Production-ready assembled page using BEM methodology:
+- `index.html` - Complete page with all 16 sections
+- `styles.css` - Unified stylesheet (~1600 lines)
+- `img/` - All images consolidated
 
-CSS variables in `styleguide.css` define the design tokens:
-- Colors: `--brand-color{10-95}`, `--neutral-gray{10-95}`, `--ultra-orange30`
-- Typography: Poppins (headings), Inter (body), Outfit (display)
+## CSS Architecture (combined/styles.css)
+
+**Design Tokens** (lines 1-71): CSS variables for colors, typography, spacing, radii
+
+**Base Components**:
+- `.btn` / `.btn--primary` / `.btn--outline` - Buttons
+- `.chip` / `.chip--light` - TOC chips
+- `.accordion` / `.accordion__item` - Collapsible FAQ/How-to sections
+- `.card` / `.bonus-card` / `.match-card` / `.review-card` - Card variants
+
+**Section Classes** (BEM naming):
+- `.header` / `.hero` / `.toc`
+- `.ipl-slider` / `.app-download` / `.live-betting`
+- `.welcome-bonus` / `.reasons` / `.app-features`
+- `.how-to-use` / `.reviews` / `.platforms`
+- `.info-table` / `.how-to-download` / `.faq` / `.footer`
+
+## JavaScript
+
+Inline `<script>` at end of `combined/index.html` handles:
+- IPL slider (auto-advance, dots navigation)
+- Match cards horizontal scroll
+- Reviews slider (prev/next buttons)
+- Accordion toggle (click anywhere on item)
 
 ## Development
 
-No build step required. Open any `index.html` in a browser to view that section. To assemble the full page, combine HTML content from sections 1-14 in order.
+No build step. Open `combined/index.html` in browser. Page width is fixed at 1920px.
+
+## Adding New Sections
+
+1. Read source from numbered folder (e.g., `14. Footer/`)
+2. Convert to BEM class names
+3. Add HTML to `combined/index.html` in correct position
+4. Add CSS to `combined/styles.css` with section comment header
+5. Copy images to `combined/img/`
