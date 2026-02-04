@@ -255,9 +255,6 @@ table {
 .btn--secondary {
   background-color: var(--color-primary-light);
   color: var(--color-primary);
-}
-
-.btn--secondary:hover {
   background-color: #fde5d8;
 }
 
@@ -293,13 +290,13 @@ table {
 }
 
 .chip--light {
-  background-color: var(--color-dark-tertiary);
-  color: var(--color-gray-lightest);
+  background-color: var(--color-bg);
+  color: var(--color-dark);
 }
 
 .chip--light:hover {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
 }
 
 /* ============================================================
@@ -898,10 +895,8 @@ table {
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
-  padding: var(--space-xl) var(--content-padding);
-  background-color: var(--color-dark-secondary);
-  margin: 0 calc(-1 * var(--content-padding));
-  width: calc(100% + 2 * var(--content-padding));
+  padding: var(--space-xl) 0;
+  background-color: var(--color-white);
 }
 
 .toc__header {
@@ -911,12 +906,12 @@ table {
 }
 
 .toc__title {
-  color: var(--color-light);
+  color: var(--color-dark);
 }
 
 .toc__date {
   font-size: var(--text-xs);
-  color: var(--color-gray-light);
+  color: var(--color-gray);
 }
 
 .toc__list {
