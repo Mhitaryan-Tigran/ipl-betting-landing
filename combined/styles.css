@@ -510,6 +510,7 @@ table {
   width: 380px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: var(--space-lg);
   background-color: var(--color-bg);
   border-radius: var(--radius-lg);
@@ -579,6 +580,10 @@ table {
   font-weight: var(--font-bold);
   font-size: var(--text-base);
   color: var(--color-primary);
+}
+
+.match-card .btn {
+  margin-top: auto;
 }
 
 /* ============================================================
