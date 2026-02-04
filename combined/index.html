@@ -135,27 +135,46 @@
                 </div>
               </div>
             </figure>
-            <article class="view">
+            <article class="view ipl-slider" data-slider="ipl">
               <header class="title-MOB">
                 <h2 id="ipl-title" class="text-wrapper-5">Indian Premier League</h2>
               </header>
-              <div class="view-2">
-                <p class="p">
-                  IPL or the Indian Premier League is the world's top men's T20 cricket league. Organized by the BCCI, its
-                  first edition was held in 2008. The latest edition of the league (2024) had 10 participating teams. The
-                  games are held all over India in different cities. Most of the world's top cricket players are seen in
-                  this exciting league.
-                </p>
+              <div class="view-2 slider-container">
+                <div class="slider-track">
+                  <p class="p slide slide-active" data-slide="0">
+                    IPL or the Indian Premier League is the world's top men's T20 cricket league. Organized by the BCCI, its
+                    first edition was held in 2008. The latest edition of the league (2024) had 10 participating teams. The
+                    games are held all over India in different cities. Most of the world's top cricket players are seen in
+                    this exciting league.
+                  </p>
+                  <p class="p slide" data-slide="1">
+                    The IPL features a unique franchise-based format where teams represent different Indian cities. Each team
+                    can have a mix of Indian and international players. The tournament attracts millions of viewers worldwide
+                    and has become one of the most valuable sports leagues globally with massive sponsorship deals.
+                  </p>
+                  <p class="p slide" data-slide="2">
+                    Betting on IPL matches offers exciting opportunities with various markets including match winner, top
+                    batsman, top bowler, and many more. Live betting during matches adds extra thrill as odds change with
+                    every ball. Our app provides real-time updates and competitive odds for all IPL matches.
+                  </p>
+                  <p class="p slide" data-slide="3">
+                    IPL 2024 season promises intense competition with teams like Mumbai Indians, Chennai Super Kings, and
+                    Royal Challengers Bangalore fighting for the trophy. Star players from around the world showcase their
+                    skills, making every match a spectacle worth watching and betting on.
+                  </p>
+                </div>
               </div>
               <nav class="div-6" aria-label="Slider navigation">
-                <button class="group-4" aria-label="Previous slide">
+                <button class="group-4 slider-prev" aria-label="Previous slide">
                   <img src="img/Group 85027.svg" alt="" />
                 </button>
-                <div class="div-7" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                  <div class="rectangle-10"></div>
-                  <div class="rectangle-11"></div>
+                <div class="div-7 slider-indicators" role="tablist">
+                  <button class="slider-dot active" data-slide="0" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+                  <button class="slider-dot" data-slide="1" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+                  <button class="slider-dot" data-slide="2" role="tab" aria-selected="false" aria-label="Slide 3"></button>
+                  <button class="slider-dot" data-slide="3" role="tab" aria-selected="false" aria-label="Slide 4"></button>
                 </div>
-                <button class="group-4" aria-label="Next slide">
+                <button class="group-4 slider-next" aria-label="Next slide">
                   <img src="img/Group 85028.svg" alt="" />
                 </button>
               </nav>
@@ -193,22 +212,22 @@
 
       <!-- Section 4: Slider2 - Live Cricket Betting -->
       <section class="section-4" id="betting" aria-labelledby="betting-title">
-        <div class="cricket-match">
+        <div class="cricket-match" data-match-slider>
           <header class="frame">
             <div class="title-MOB">
               <h2 id="betting-title" class="text-wrapper">IPL Live Cricket Betting</h2>
             </div>
             <nav class="div" aria-label="Match slider navigation">
-              <button class="group" aria-label="Previous match">
+              <button class="group match-prev" aria-label="Previous match">
                 <img src="img/group-85024.svg" alt="" />
               </button>
-              <button class="group" aria-label="Next match">
+              <button class="group match-next" aria-label="Next match">
                 <img src="img/group-85024-1.svg" alt="" />
               </button>
             </nav>
           </header>
-          <div class="frame-2">
-            <article class="frame-3">
+          <div class="frame-2 match-slider-track">
+            <article class="frame-3 match-card">
               <header class="frame-4">
                 <h3 class="rajiv-gandhi">Rajiv Gandhi International Stadium, Hyderabad</h3>
                 <div class="frame-5">
@@ -240,7 +259,7 @@
                 <span class="name">Bet Now</span>
               </a>
             </article>
-            <article class="frame-3">
+            <article class="frame-3 match-card">
               <header class="frame-4">
                 <h3 class="rajiv-gandhi">Wankhede Stadium, Mumbai</h3>
                 <div class="frame-5">
@@ -265,6 +284,134 @@
                   <div class="frame-8">
                     <h4 class="sunreser-hyderabad">Kolkata<br />Knight Riders</h4>
                     <span class="text-wrapper-5">(19.1 OV)</span>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="chips">
+                <span class="name">Bet Now</span>
+              </a>
+            </article>
+            <article class="frame-3 match-card">
+              <header class="frame-4">
+                <h3 class="rajiv-gandhi">M. A. Chidambaram Stadium, Chennai</h3>
+                <div class="frame-5">
+                  <time class="text-wrapper-2" datetime="2024-05-21T19:30">Tuesday, May 21</time>
+                  <time class="text-wrapper-2">19:30 pm IST</time>
+                </div>
+              </header>
+              <div class="frame-6">
+                <div class="frame-7">
+                  <img class="image" src="img/image-31-1.png" alt="Chennai Super Kings logo" />
+                  <div class="frame-8">
+                    <h4 class="sunreser-hyderabad">Chennai<br />Super Kings</h4>
+                    <span class="text-wrapper-3">(18.4 OV)</span>
+                  </div>
+                </div>
+                <div class="frame-9" aria-label="versus">
+                  <span class="text-wrapper-4" aria-hidden="true">V</span>
+                  <span class="text-wrapper-4" aria-hidden="true">S</span>
+                </div>
+                <div class="frame-7">
+                  <img class="image" src="img/image-31-1.png" alt="Delhi Capitals logo" />
+                  <div class="frame-8">
+                    <h4 class="sunreser-hyderabad">Delhi<br />Capitals</h4>
+                    <span class="text-wrapper-5">(20.0 OV)</span>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="chips">
+                <span class="name">Bet Now</span>
+              </a>
+            </article>
+            <article class="frame-3 match-card">
+              <header class="frame-4">
+                <h3 class="rajiv-gandhi">M. Chinnaswamy Stadium, Bangalore</h3>
+                <div class="frame-5">
+                  <time class="text-wrapper-2" datetime="2024-05-22T20:00">Wednesday, May 22</time>
+                  <time class="text-wrapper-2">20:00 pm IST</time>
+                </div>
+              </header>
+              <div class="frame-6">
+                <div class="frame-7">
+                  <img class="image" src="img/image-31-1.png" alt="Royal Challengers Bangalore logo" />
+                  <div class="frame-8">
+                    <h4 class="sunreser-hyderabad">Royal<br />Challengers</h4>
+                    <span class="text-wrapper-3">(17.2 OV)</span>
+                  </div>
+                </div>
+                <div class="frame-9" aria-label="versus">
+                  <span class="text-wrapper-4" aria-hidden="true">V</span>
+                  <span class="text-wrapper-4" aria-hidden="true">S</span>
+                </div>
+                <div class="frame-7">
+                  <img class="image" src="img/image-31-1.png" alt="Punjab Kings logo" />
+                  <div class="frame-8">
+                    <h4 class="sunreser-hyderabad">Punjab<br />Kings</h4>
+                    <span class="text-wrapper-5">(19.5 OV)</span>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="chips">
+                <span class="name">Bet Now</span>
+              </a>
+            </article>
+            <article class="frame-3 match-card">
+              <header class="frame-4">
+                <h3 class="rajiv-gandhi">Eden Gardens, Kolkata</h3>
+                <div class="frame-5">
+                  <time class="text-wrapper-2" datetime="2024-05-23T19:30">Thursday, May 23</time>
+                  <time class="text-wrapper-2">19:30 pm IST</time>
+                </div>
+              </header>
+              <div class="frame-6">
+                <div class="frame-7">
+                  <img class="image" src="img/image-31-1.png" alt="Kolkata Knight Riders logo" />
+                  <div class="frame-8">
+                    <h4 class="sunreser-hyderabad">Kolkata<br />Knight Riders</h4>
+                    <span class="text-wrapper-3">(16.3 OV)</span>
+                  </div>
+                </div>
+                <div class="frame-9" aria-label="versus">
+                  <span class="text-wrapper-4" aria-hidden="true">V</span>
+                  <span class="text-wrapper-4" aria-hidden="true">S</span>
+                </div>
+                <div class="frame-7">
+                  <img class="image" src="img/image-31-1.png" alt="Gujarat Titans logo" />
+                  <div class="frame-8">
+                    <h4 class="sunreser-hyderabad">Gujarat<br />Titans</h4>
+                    <span class="text-wrapper-5">(20.0 OV)</span>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="chips">
+                <span class="name">Bet Now</span>
+              </a>
+            </article>
+            <article class="frame-3 match-card">
+              <header class="frame-4">
+                <h3 class="rajiv-gandhi">Narendra Modi Stadium, Ahmedabad</h3>
+                <div class="frame-5">
+                  <time class="text-wrapper-2" datetime="2024-05-24T20:00">Friday, May 24</time>
+                  <time class="text-wrapper-2">20:00 pm IST</time>
+                </div>
+              </header>
+              <div class="frame-6">
+                <div class="frame-7">
+                  <img class="image" src="img/image-31-1.png" alt="Gujarat Titans logo" />
+                  <div class="frame-8">
+                    <h4 class="sunreser-hyderabad">Gujarat<br />Titans</h4>
+                    <span class="text-wrapper-3">(19.0 OV)</span>
+                  </div>
+                </div>
+                <div class="frame-9" aria-label="versus">
+                  <span class="text-wrapper-4" aria-hidden="true">V</span>
+                  <span class="text-wrapper-4" aria-hidden="true">S</span>
+                </div>
+                <div class="frame-7">
+                  <img class="image" src="img/image-31-1.png" alt="Lucknow Super Giants logo" />
+                  <div class="frame-8">
+                    <h4 class="sunreser-hyderabad">Lucknow<br />Super Giants</h4>
+                    <span class="text-wrapper-5">(18.2 OV)</span>
                   </div>
                 </div>
               </div>
@@ -838,5 +985,85 @@
         </div>
       </div>
     </footer>
+
+    <script>
+    // IPL Slider functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const sliders = document.querySelectorAll('[data-slider]');
+
+      sliders.forEach(slider => {
+        const slides = slider.querySelectorAll('.slide');
+        const dots = slider.querySelectorAll('.slider-dot');
+        const prevBtn = slider.querySelector('.slider-prev');
+        const nextBtn = slider.querySelector('.slider-next');
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+
+        function updateSlider(index) {
+          slides.forEach((slide, i) => {
+            slide.classList.remove('slide-active', 'slide-prev', 'slide-next');
+            if (i === index) {
+              slide.classList.add('slide-active');
+            } else if (i === (index - 1 + totalSlides) % totalSlides) {
+              slide.classList.add('slide-prev');
+            } else if (i === (index + 1) % totalSlides) {
+              slide.classList.add('slide-next');
+            }
+          });
+
+          dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+            dot.setAttribute('aria-selected', i === index);
+          });
+
+          currentSlide = index;
+        }
+
+        prevBtn?.addEventListener('click', () => {
+          updateSlider((currentSlide - 1 + totalSlides) % totalSlides);
+        });
+
+        nextBtn?.addEventListener('click', () => {
+          updateSlider((currentSlide + 1) % totalSlides);
+        });
+
+        dots.forEach((dot, i) => {
+          dot.addEventListener('click', () => updateSlider(i));
+        });
+
+        // Auto-slide every 5 seconds
+        setInterval(() => {
+          updateSlider((currentSlide + 1) % totalSlides);
+        }, 5000);
+      });
+
+      // Match slider functionality
+      const matchSliders = document.querySelectorAll('[data-match-slider]');
+      matchSliders.forEach(slider => {
+        const track = slider.querySelector('.match-slider-track');
+        const prevBtn = slider.querySelector('.match-prev');
+        const nextBtn = slider.querySelector('.match-next');
+        const cards = slider.querySelectorAll('.match-card');
+        const cardWidth = 424; // card width + gap
+
+        prevBtn?.addEventListener('click', () => {
+          track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+        });
+
+        nextBtn?.addEventListener('click', () => {
+          track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        });
+
+        // Update button states based on scroll position
+        function updateButtons() {
+          prevBtn.style.opacity = track.scrollLeft <= 0 ? '0.5' : '1';
+          nextBtn.style.opacity = track.scrollLeft >= track.scrollWidth - track.clientWidth - 10 ? '0.5' : '1';
+        }
+
+        track.addEventListener('scroll', updateButtons);
+        updateButtons();
+      });
+    });
+    </script>
   </body>
 </html>

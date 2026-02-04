@@ -276,7 +276,7 @@ body {
   display: inline-flex;
   padding: 0px 56px;
   flex: 0 0 auto;
-  background-color: var(--ultra-orange95);
+  background-color: #FDF0EA;
   height: 60px;
   align-items: center;
   justify-content: center;
@@ -502,11 +502,14 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 0px 290px;
+  padding: 32px 290px;
   position: relative;
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
+  background-color: var(--neutral-gray20);
+  margin: 0 -290px;
+  width: calc(100% + 580px);
 }
 .section-1 .frame .title-MOB-2 {
   display: flex;
@@ -521,7 +524,7 @@ body {
 }
 .section-1 .frame .text-wrapper-7 {
   margin-top: -1px;
-  color: var(--neutral-gray10);
+  color: var(--neutral-gray95);
   font-size: var(--popins-36-h3-font-size);
   line-height: var(--popins-36-h3-line-height);
   position: relative;
@@ -543,7 +546,7 @@ body {
   width: fit-content;
   font-family: var(--inter-14-font-family);
   font-weight: var(--inter-14-font-weight);
-  color: var(--neutral-gray50);
+  color: var(--neutral-gray70);
   font-size: var(--inter-14-font-size);
   letter-spacing: var(--inter-14-letter-spacing);
   line-height: var(--inter-14-line-height);
@@ -579,12 +582,12 @@ body {
   position: relative;
   flex: 1;
   flex-grow: 1;
-  background-color: var(--ultra-gray20);
+  background-color: var(--neutral-gray30);
   border-radius: 100px;
   cursor: pointer;
 }
 .section-1 .frame .chips-2:hover {
-  background-color: var(--ultra-orange95);
+  background-color: var(--ultra-orange30);
 }
 .section-1 .frame .name-3,
 .section-1 .frame .name-4,
@@ -592,7 +595,7 @@ body {
 .section-1 .frame .name-6,
 .section-1 .frame .name-7,
 .section-1 .frame .name-8 {
-  color: var(--neutral-gray10);
+  color: var(--neutral-gray90);
   font-size: 16px;
   line-height: 19.2px;
   position: relative;
@@ -921,6 +924,78 @@ body {
   border-radius: 3.5px;
 }
 
+/* IPL Slider styles */
+.section-2 .slider-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 180px;
+}
+.section-2 .slider-track {
+  position: relative;
+  width: 100%;
+}
+.section-2 .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: scale(0.85) translateY(20px);
+  filter: blur(4px);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+.section-2 .slide.slide-active {
+  position: relative;
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  filter: blur(0);
+  pointer-events: auto;
+}
+.section-2 .slide.slide-prev {
+  transform: scale(0.7) translateX(-30%) rotateY(15deg);
+  transform-origin: right center;
+}
+.section-2 .slide.slide-next {
+  transform: scale(0.7) translateX(30%) rotateY(-15deg);
+  transform-origin: left center;
+}
+.section-2 .slider-indicators {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: transparent;
+}
+.section-2 .slider-dot {
+  width: 40px;
+  height: 8px;
+  background-color: var(--neutral-gray80);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+.section-2 .slider-dot:hover {
+  background-color: var(--neutral-gray60);
+}
+.section-2 .slider-dot.active {
+  width: 80px;
+  background-color: var(--ultra-orange30);
+}
+.section-2 .slider-prev,
+.section-2 .slider-next {
+  transition: transform 0.2s ease;
+}
+.section-2 .slider-prev:hover,
+.section-2 .slider-next:hover {
+  transform: scale(1.1);
+}
+.section-2 .slider-prev:active,
+.section-2 .slider-next:active {
+  transform: scale(0.95);
+}
+
 /* ==================== SECTION 3: Download App ==================== */
 .section-3 .frame {
   display: flex;
@@ -1241,6 +1316,46 @@ body {
   white-space: nowrap;
 }
 
+/* Match Slider styles */
+.section-4 .match-slider-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 10px;
+}
+.section-4 .match-slider-track::-webkit-scrollbar {
+  display: none;
+}
+.section-4 .match-card {
+  flex: 0 0 auto;
+  min-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.section-4 .match-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.section-4 .match-prev,
+.section-4 .match-next {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.section-4 .match-prev:hover,
+.section-4 .match-next:hover {
+  transform: scale(1.1);
+}
+.section-4 .match-prev:active,
+.section-4 .match-next:active {
+  transform: scale(0.95);
+}
+.section-4 .match-prev:disabled,
+.section-4 .match-next:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 /* ==================== SECTION 5: Welcome Bonus ==================== */
 .section-5 .frame {
   flex-direction: column;
@@ -1339,7 +1454,7 @@ body {
   padding: 36px;
   flex: 1;
   flex-grow: 1;
-  background-color: var(--ultra-dark30);
+  background-color: #161412;
   border-radius: 24px;
   display: flex;
   position: relative;
