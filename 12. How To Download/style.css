@@ -1,0 +1,192 @@
+.frame {
+  flex-direction: column;
+  width: 1920px;
+  align-items: flex-start;
+  padding: 0px 32px;
+  display: flex;
+  position: relative;
+}
+
+.frame .div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 100px 258px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: var(--ultra-gray20);
+  border-radius: 32px;
+}
+
+.frame .div-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 0px 32px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .text-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--popins-52-h2-font-family);
+  font-weight: var(--popins-52-h2-font-weight);
+  color: var(--neutral-gray10);
+  font-size: var(--popins-52-h2-font-size);
+  letter-spacing: var(--popins-52-h2-letter-spacing);
+  line-height: var(--popins-52-h2-line-height);
+  font-style: var(--popins-52-h2-font-style);
+}
+
+.frame .p {
+  position: relative;
+  width: 740px;
+  font-family: var(--inter-18-font-family);
+  font-weight: var(--inter-18-font-weight);
+  color: var(--neutral-gray50);
+  font-size: var(--inter-18-font-size);
+  letter-spacing: var(--inter-18-letter-spacing);
+  line-height: var(--inter-18-line-height);
+  font-style: var(--inter-18-font-style);
+}
+
+.frame .div-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .div-4 {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: 32px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: #ffffff;
+  border-radius: 32px;
+}
+
+.frame .img {
+  position: relative;
+  width: 620px;
+  height: 402px;
+}
+
+.frame .view {
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+}
+
+.frame .title-MOB {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 0px 0px 24px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .text-wrapper-2 {
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: var(--popins-36-h3-font-family);
+  font-weight: var(--popins-36-h3-font-weight);
+  color: var(--neutral-gray10);
+  font-size: var(--popins-36-h3-font-size);
+  letter-spacing: var(--popins-36-h3-letter-spacing);
+  line-height: var(--popins-36-h3-line-height);
+  display: flex;
+  position: relative;
+  font-style: var(--popins-36-h3-font-style);
+}
+
+.frame .div-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0px 0px 32px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .text-wrapper-3 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: var(--inter-18-font-family);
+  font-weight: var(--inter-18-font-weight);
+  color: var(--neutral-gray50);
+  font-size: var(--inter-18-font-size);
+  letter-spacing: var(--inter-18-letter-spacing);
+  line-height: var(--inter-18-line-height);
+  font-style: var(--inter-18-font-style);
+}
+
+.frame .chips-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .chips {
+  display: flex;
+  width: 256px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 0px 44px;
+  position: relative;
+  background-color: var(--ultra-orange30);
+  border-radius: 100px;
+}
+
+.frame .name {
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  color: var(--ultra-gray30);
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 21.6px;
+  white-space: nowrap;
+  display: flex;
+  position: relative;
+}
