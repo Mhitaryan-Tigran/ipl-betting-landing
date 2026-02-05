@@ -292,6 +292,7 @@ table {
   border-radius: var(--radius-full);
   font-family: var(--font-heading);
   font-weight: var(--font-semibold);
+  white-space: nowrap;
   font-size: var(--text-sm);
   cursor: pointer;
   transition: background-color 0.2s;
@@ -388,6 +389,7 @@ table {
   align-items: center;
   justify-content: space-between;
   padding-bottom: var(--space-lg);
+  transition: padding-bottom 0.3s ease;
 }
 
 .accordion__title {
@@ -420,7 +422,7 @@ table {
   line-height: var(--leading-normal);
   color: var(--color-gray);
   overflow: hidden;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
+  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
   max-height: 500px;
   opacity: 1;
 }
@@ -838,7 +840,16 @@ table {
 
 .toc__row {
   display: flex;
+  justify-content: space-between;
   gap: 20px;
+}
+
+.toc__row:first-child .chip {
+  width: 252px;
+}
+
+.toc__row:last-child .chip {
+  width: 206px;
 }
 
 /*                                                             

@@ -145,7 +145,7 @@
       <!-- TOC -->
       <nav class="toc" aria-label="Table of contents">
         <div class="toc__header">
-          <h2 class="heading heading--xl toc__title">Table of Contents</h2>
+          <h2 class="heading heading--xl toc__title">Content Table</h2>
           <p class="toc__date">Update: 07.05.2024</p>
         </div>
         <ul class="toc__list">
@@ -155,6 +155,14 @@
             <a href="#betting" class="chip chip--light">IPL Cricket Betting</a>
             <a href="#bonus" class="chip chip--light">Welcome Bonus</a>
             <a href="#reasons" class="chip chip--light">Reasons to Download</a>
+          </li>
+          <li class="toc__row">
+            <a href="#features" class="chip chip--light">IPL mobile features</a>
+            <a href="#how-to-use" class="chip chip--light">How to use?</a>
+            <a href="#reviews" class="chip chip--light">Reviews</a>
+            <a href="#info" class="chip chip--light">Main information</a>
+            <a href="#prediction" class="chip chip--light">IPL prediction app</a>
+            <a href="#faq" class="chip chip--light">FAQ</a>
           </li>
         </ul>
       </nav>
@@ -777,10 +785,10 @@
       </section>
 
       <!-- How To Download -->
-      <section class="how-to-download" id="download" aria-labelledby="download-title">
+      <section class="how-to-download" id="prediction" aria-labelledby="prediction-title">
         <div class="how-to-download__inner">
           <header class="how-to-download__header">
-            <h2 id="download-title" class="heading heading--2xl">How to download the<br>IPL prediction app?</h2>
+            <h2 id="prediction-title" class="heading heading--2xl">How to download the<br>IPL prediction app?</h2>
             <p class="text">
               The IPL betting app offers a user-friendly mobile interface that allows users to place bets anytime,
               anywhere. Enjoy features like secure transactions, detailed match
@@ -1035,11 +1043,18 @@
 
       // Accordion functionality
       const accordionItems = document.querySelectorAll('.accordion__item');
+      const faqFirstItem = document.querySelector('.faq .accordion__item');
+
       accordionItems.forEach((item) => {
-        // Close all by default
-        item.classList.add('accordion__item--closed');
-        const btn = item.querySelector('.accordion__icon');
-        if (btn) btn.setAttribute('aria-expanded', 'false');
+        // Close all by default, except first FAQ item
+        if (item === faqFirstItem) {
+          const btn = item.querySelector('.accordion__icon');
+          if (btn) btn.setAttribute('aria-expanded', 'true');
+        } else {
+          item.classList.add('accordion__item--closed');
+          const btn = item.querySelector('.accordion__icon');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        }
 
         // Click anywhere on item to toggle
         item.addEventListener('click', () => {
