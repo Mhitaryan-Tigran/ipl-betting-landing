@@ -18,44 +18,53 @@ Original Figma exports in 14 numbered folders (1-14). Each contains:
 
 ### Combined Page (`combined/`)
 Production-ready assembled page using BEM methodology:
-- `index.html` - Complete page with all sections (~1080 lines)
-- `styles.css` - Unified stylesheet (~1660 lines)
+- `index.html` - Complete page with all sections
+- `css/` - Modular stylesheets (20 files)
+- `js/` - Modular JavaScript (6 files)
 - `robots.txt`, `sitemap.xml` - SEO files
 - `img/` - All images consolidated
 
-## CSS Architecture (combined/styles.css)
+## CSS Architecture (`combined/css/`)
 
-**Design Tokens** (lines 1-71): CSS variables defined in `:root`
+Modular CSS structure with separate files:
+
+**Foundation:**
+- `variables.css` - Design tokens (colors, typography, spacing, layout)
+- `reset.css` - Meyer reset + Google Fonts imports
+- `base.css` - Layout, typography, buttons, chips, cards, nav, accordion, slider components
+
+**Section styles** (one file per section):
+- `header.css`, `hero.css`, `toc.css`
+- `ipl-slider.css`, `app-download.css`, `live-betting.css`
+- `welcome-bonus.css`, `reasons.css`, `app-features.css`
+- `how-to-use.css`, `reviews.css`, `platforms.css`
+- `info-table.css`, `how-to-download.css`, `faq.css`, `footer.css`
+
+**Responsive:**
+- `responsive.css` - Mobile breakpoints (768px, 480px)
+
+**Design Tokens** (in `variables.css`):
 - Colors: `--color-primary` (#ff7d34), `--color-dark`, `--color-gray-*`
 - Typography: `--font-heading` (Poppins), `--font-body` (Inter)
 - Spacing: `--space-xs` through `--space-4xl`
 - Layout: `--container-width` (1920px), `--content-padding` (290px)
 
-**Base Components**:
-- `.btn` / `.btn--primary` / `.btn--outline` - Buttons (60px height, full radius)
-- `.chip` / `.chip--light` - TOC chips
-- `.accordion` / `.accordion__item` - Collapsible sections with CSS transitions
-- `.card` / `.bonus-card` / `.match-card` / `.review-card` - Card variants
+## JavaScript Architecture (`combined/js/`)
 
-**Section Classes** (BEM naming):
-- `.header` / `.hero` / `.toc`
-- `.ipl-slider` / `.app-download` / `.live-betting`
-- `.welcome-bonus` / `.reasons` / `.app-features`
-- `.how-to-use` / `.reviews` / `.platforms`
-- `.info-table` / `.how-to-download` / `.faq` / `.footer`
+Modular JS structure with separate files:
 
-## JavaScript
+- `ipl-slider.js` - IPL slider: auto-advance every 5s, dots navigation, prev/next buttons
+- `match-slider.js` - Match cards: horizontal scroll with 424px steps
+- `reviews-slider.js` - Reviews carousel: transform-based, 2 cards visible
+- `accordion.js` - Collapsible sections: click to toggle, CSS class `accordion__item--closed`
+- `mobile-menu.js` - Burger menu toggle for mobile navigation
+- `main.js` - Initializes all components on DOMContentLoaded
 
-Inline `<script>` at end of `combined/index.html` (lines 937-1107) handles:
-- **IPL Slider**: Auto-advance every 5s, dots navigation, prev/next buttons
-- **Match Slider**: Horizontal scroll with 424px card width steps
-- **Reviews Slider**: Transform-based sliding, 2 cards visible at a time
-- **Accordion**: Click anywhere on item to toggle, CSS class `accordion__item--closed`
-- **Mobile Menu**: Burger toggle for mobile navigation
+Each component file exports an `init*()` function called from `main.js`.
 
 ## Responsive Design
 
-The page includes mobile responsive styles (combined/styles.css lines 1729-2238):
+Mobile breakpoints in `responsive.css`:
 - **Tablet/Mobile** (max-width: 768px): Stacked layouts, smaller typography, burger menu, horizontal scroll for sliders
 - **Small Mobile** (max-width: 480px): Further reduced sizes, some elements hidden
 
@@ -78,5 +87,5 @@ No build step required. Open `combined/index.html` directly in browser.
 When adding sections from `sections/` folder:
 1. Figma exports use auto-generated class names (e.g., `.frame-452656499`) - convert to semantic BEM names
 2. Figma uses percentage-based absolute positioning - convert to flexbox/grid layouts
-3. Each section comment in `styles.css` follows format: `/* SECTION: NAME */`
+3. Create a new CSS file in `css/` folder for section-specific styles
 4. Copy images to `combined/img/` with descriptive lowercase names
