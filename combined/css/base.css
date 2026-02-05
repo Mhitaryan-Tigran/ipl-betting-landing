@@ -506,9 +506,9 @@
 }
 
 .match-card__team-logo {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
 }
 
 .match-card__team-name {
