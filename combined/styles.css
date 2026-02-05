@@ -357,6 +357,73 @@ table {
 }
 
 /*
+   BURGER MENU
+*/
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 24px;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.burger__line {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-dark);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.burger--active .burger__line:nth-child(1) {
+  transform: translateY(10.5px) rotate(45deg);
+}
+
+.burger--active .burger__line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger--active .burger__line:nth-child(3) {
+  transform: translateY(-10.5px) rotate(-45deg);
+}
+
+/*
+   MOBILE NAV
+*/
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-lg) var(--content-padding);
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-gray-lightest);
+}
+
+.mobile-nav--open {
+  display: flex;
+}
+
+.mobile-nav__link {
+  font-family: var(--font-heading);
+  font-weight: var(--font-medium);
+  font-size: var(--text-base);
+  color: var(--color-gray);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-gray-lightest);
+  transition: color 0.2s;
+}
+
+.mobile-nav__link:hover {
+  color: var(--color-primary);
+}
+
+.mobile-nav__cta {
+  margin-top: var(--space-sm);
+}
+
+/*
    ACCORDION
 */
 .accordion {
@@ -1653,5 +1720,697 @@ table {
 
 .footer__link:hover {
   color: var(--color-primary);
+}
+
+/*
+   RESPONSIVE - TABLET (max-width: 1200px)
+                                                                */
+@media (max-width: 1200px) {
+  :root {
+    --content-padding: 60px;
+    --content-padding-wide: 20px;
+  }
+
+  body {
+    gap: 60px;
+  }
+
+  main {
+    gap: 60px;
+  }
+
+  .header,
+  .hero,
+  .toc,
+  .ipl-slider,
+  .app-download,
+  .live-betting,
+  .welcome-bonus,
+  .reasons,
+  .app-features,
+  .how-to-use,
+  .reviews,
+  .platforms,
+  .info-table,
+  .how-to-download,
+  .faq,
+  .footer {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    gap: var(--space-xl);
+  }
+
+  .hero__image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .toc__list {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 var(--content-padding);
+  }
+
+  .toc__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .toc__row {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: max-content;
+    padding: 0;
+  }
+
+  .toc__row .chip {
+    width: auto !important;
+    flex-shrink: 0;
+  }
+
+  .ipl-slider__inner {
+    flex-direction: column;
+    padding: var(--space-3xl) var(--space-xl);
+    gap: var(--space-xl);
+  }
+
+  .ipl-visual {
+    width: 100%;
+    max-width: 400px;
+    height: 420px;
+  }
+
+  .ipl-visual__bg {
+    width: 350px;
+    height: 350px;
+    top: 40px;
+    left: 25px;
+  }
+
+  .ipl-visual__player {
+    width: 380px;
+    height: 400px;
+  }
+
+  .app-download {
+    flex-direction: column-reverse;
+    gap: var(--space-xl);
+  }
+
+  .app-download__image {
+    max-width: 500px;
+  }
+
+  .welcome-bonus__inner {
+    padding: var(--space-3xl) var(--space-xl);
+  }
+
+  .welcome-bonus__cards {
+    flex-direction: column;
+  }
+
+  .bonus-card {
+    width: 100%;
+  }
+
+  .bonus-card__content {
+    width: 100%;
+  }
+
+  .reasons,
+  .how-to-use,
+  .faq {
+    padding: 0 var(--content-padding-wide);
+  }
+
+  .reasons__inner,
+  .how-to-use__inner,
+  .faq__inner {
+    width: 100%;
+    padding: var(--space-xl);
+  }
+
+  .app-features__inner {
+    flex-direction: column;
+    padding: var(--space-xl);
+    gap: var(--space-xl);
+  }
+
+  .app-features__visual {
+    width: 100%;
+    max-width: 400px;
+    height: 420px;
+  }
+
+  .app-features__ellipse {
+    width: 300px;
+    height: 300px;
+    top: 60px;
+    left: 50px;
+  }
+
+  .app-features__phones {
+    left: 40px;
+    width: 200px;
+    height: 420px;
+  }
+
+  .app-features__phone--front {
+    width: 200px;
+    height: 420px;
+  }
+
+  .app-features__phone--back {
+    width: 180px;
+    height: 400px;
+  }
+
+  .app-features__phone-shadow {
+    width: 190px;
+    height: 415px;
+    border-radius: 40px;
+  }
+
+  .app-features__badge--support {
+    top: 100px;
+    left: 200px;
+  }
+
+  .app-features__badge--game {
+    top: 300px;
+    left: 200px;
+  }
+
+  .app-features__badge--tips {
+    top: 200px;
+    left: 180px;
+  }
+
+  .app-features__list-text {
+    white-space: normal;
+  }
+
+  .review-card {
+    width: 100%;
+    min-width: 300px;
+  }
+
+  .info-table__header,
+  .info-table__content {
+    padding: 0 var(--space-xl);
+  }
+
+  .info-table__rows {
+    padding: var(--space-xl);
+  }
+
+  .info-table__row {
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .info-table__label {
+    width: 100%;
+  }
+
+  .info-table__number {
+    display: none;
+  }
+
+  .how-to-download__inner {
+    padding: var(--space-xl);
+  }
+
+  .download-card {
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .download-card--reverse {
+    flex-direction: column-reverse;
+  }
+
+  .download-card__image {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer__content {
+    flex-direction: column;
+    gap: var(--space-xl);
+    align-items: flex-start;
+  }
+
+  .footer__nav {
+    align-items: flex-start;
+  }
+
+  .footer__links {
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+}
+
+/*
+   RESPONSIVE - MOBILE (max-width: 768px)
+                                                                */
+@media (max-width: 768px) {
+  :root {
+    --content-padding: 20px;
+    --content-padding-wide: 16px;
+    --text-3xl: 36px;
+    --text-2xl: 28px;
+    --text-xl: 24px;
+    --text-lg: 20px;
+    --text-base: 16px;
+  }
+
+  body {
+    gap: 40px;
+    padding-bottom: 40px;
+  }
+
+  main {
+    gap: 40px;
+  }
+
+  /* Header */
+  .header__inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--content-padding);
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .header__cta {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 0 var(--content-padding);
+  }
+
+  .hero__left {
+    gap: var(--space-lg);
+  }
+
+  .hero__title {
+    padding-bottom: var(--space-lg);
+  }
+
+  .hero__cta .btn {
+    width: 100%;
+  }
+
+  .hero__social {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: var(--space-lg);
+  }
+
+  .avatars__item {
+    width: 48px;
+    height: 48px;
+  }
+
+  .avatars__item--overlay img {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* TOC */
+  .toc {
+    padding: var(--space-lg) 0;
+  }
+
+  .toc__header {
+    padding: 0 var(--content-padding);
+  }
+
+  .toc__list {
+    gap: var(--space-sm);
+  }
+
+  .toc__row {
+    gap: var(--space-sm);
+  }
+
+  .chip {
+    height: 48px;
+    padding: 0 var(--space-lg);
+    font-size: var(--text-xs);
+  }
+
+  /* IPL Slider */
+  .ipl-slider__inner {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .ipl-visual {
+    max-width: 300px;
+    height: 320px;
+  }
+
+  .ipl-visual__bg {
+    width: 260px;
+    height: 260px;
+    top: 30px;
+    left: 20px;
+  }
+
+  .ipl-visual__player {
+    width: 280px;
+    height: 300px;
+  }
+
+  .ipl-visual__badge--winning {
+    top: 10px;
+    right: -10px;
+    padding: var(--space-sm);
+  }
+
+  .ipl-visual__badge--winning .heading {
+    font-size: var(--text-lg);
+  }
+
+  .slider__nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .slider__dot {
+    width: 24px;
+    height: 6px;
+  }
+
+  .slider__dot--active {
+    width: 48px;
+  }
+
+  /* App Download */
+  .app-download__image {
+    max-width: 100%;
+  }
+
+  /* Live Betting */
+  .live-betting__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .live-betting__nav {
+    display: none;
+  }
+
+  .match-card {
+    flex: 0 0 300px;
+    width: 300px;
+  }
+
+  .match-card__teams {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .match-card__team {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Welcome Bonus */
+  .welcome-bonus__inner {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .welcome-bonus__header {
+    padding-bottom: var(--space-xl);
+  }
+
+  .bonus-card {
+    padding: var(--space-lg);
+  }
+
+  /* Accordion */
+  .accordion__item {
+    padding: var(--space-md);
+  }
+
+  .accordion__header {
+    padding-bottom: var(--space-md);
+  }
+
+  .accordion__title {
+    font-size: var(--text-base);
+  }
+
+  /* App Features */
+  .app-features__visual {
+    max-width: 300px;
+    height: 350px;
+  }
+
+  .app-features__ellipse {
+    width: 220px;
+    height: 220px;
+    top: 60px;
+    left: 40px;
+  }
+
+  .app-features__phones {
+    left: 30px;
+    top: 40px;
+    width: 160px;
+    height: 340px;
+  }
+
+  .app-features__phone--front {
+    width: 160px;
+    height: 340px;
+  }
+
+  .app-features__phone--back {
+    width: 145px;
+    height: 320px;
+  }
+
+  .app-features__phone-shadow {
+    width: 150px;
+    height: 335px;
+    border-radius: 32px;
+  }
+
+  .app-features__badge {
+    padding: var(--space-xs) var(--space-sm);
+    gap: var(--space-sm);
+  }
+
+  .app-features__badge--support {
+    top: 80px;
+    left: 150px;
+  }
+
+  .app-features__badge--game {
+    top: 240px;
+    left: 150px;
+  }
+
+  .app-features__badge--tips {
+    top: 160px;
+    left: 130px;
+  }
+
+  .app-features__badge-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .app-features__badge-icon img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .app-features__badge-line {
+    height: 32px;
+  }
+
+  .app-features__badge-title {
+    font-size: var(--text-xs);
+  }
+
+  .app-features__badge-value {
+    font-size: 12px;
+  }
+
+  /* Reviews */
+  .reviews__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .review-card {
+    flex-direction: column;
+    padding: var(--space-md);
+  }
+
+  .review-card__avatar {
+    width: 100%;
+    height: 200px;
+  }
+
+  /* Platforms */
+  .platforms__header .heading {
+    font-size: var(--text-xl);
+  }
+
+  /* Info Table */
+  .info-table__inner {
+    padding: var(--space-xl) 0;
+  }
+
+  .info-table__row {
+    padding: var(--space-md);
+  }
+
+  .info-table__label {
+    font-size: var(--text-base);
+  }
+
+  /* How to Download */
+  .download-card__content .btn {
+    width: 100%;
+  }
+
+  /* Footer */
+  .footer {
+    display: none;
+  }
+}
+
+/*
+   RESPONSIVE - SMALL MOBILE (max-width: 480px)
+                                                                */
+@media (max-width: 480px) {
+  :root {
+    --text-3xl: 28px;
+    --text-2xl: 24px;
+    --text-xl: 20px;
+  }
+
+  .btn {
+    height: 52px;
+    padding: 0 var(--space-xl);
+    font-size: var(--text-sm);
+  }
+
+  .btn--wide {
+    width: 100%;
+  }
+
+  .hero__image {
+    max-width: 100%;
+  }
+
+  .chip {
+    height: 40px;
+    padding: 0 var(--space-md);
+    font-size: 12px;
+  }
+
+  .ipl-visual {
+    max-width: 260px;
+    height: 280px;
+  }
+
+  .ipl-visual__bg {
+    width: 220px;
+    height: 220px;
+    top: 30px;
+    left: 20px;
+  }
+
+  .ipl-visual__player {
+    width: 240px;
+    height: 260px;
+  }
+
+  .ipl-visual__badge--winning {
+    display: none;
+  }
+
+  .app-features__visual {
+    max-width: 260px;
+    height: 300px;
+  }
+
+  .app-features__badge {
+    display: none;
+  }
+
+  .app-features__ellipse {
+    width: 200px;
+    height: 200px;
+    top: 50px;
+    left: 30px;
+  }
+
+  .app-features__phones {
+    left: 50px;
+    top: 30px;
+    width: 140px;
+    height: 300px;
+  }
+
+  .app-features__phone--front {
+    width: 140px;
+    height: 300px;
+  }
+
+  .app-features__phone--back {
+    display: none;
+  }
+
+  .app-features__phone-shadow {
+    width: 130px;
+    height: 295px;
+    border-radius: 28px;
+  }
+
+  .match-card {
+    flex: 0 0 280px;
+    width: 280px;
+  }
+
+  .review-card__avatar {
+    height: 160px;
+  }
+
+  .download-card__image {
+    height: 250px;
+    object-fit: contain;
+  }
+
+  .footer__links {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
 }
 

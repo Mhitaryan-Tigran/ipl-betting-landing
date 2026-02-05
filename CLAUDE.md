@@ -9,28 +9,32 @@ Static HTML/CSS landing page for IPL betting app. Originally exported from Figma
 ## Architecture
 
 ### Source Sections (`sections/`)
-Original Figma exports in 14 numbered folders. Each contains:
-- `index.html` - Section markup with auto-generated class names
-- `style.css` - Section styles with percentage-based positioning
+Original Figma exports in 14 numbered folders (1-14). Each contains:
+- `index.html` - Section markup with auto-generated class names (e.g., `.frame-452656499`, `.group-85046`)
+- `style.css` - Section styles with percentage-based absolute positioning
 - `styleguide.css` - Design tokens
 - `globals.css` - CSS reset
 - `img/` - Section images
 
 ### Combined Page (`combined/`)
 Production-ready assembled page using BEM methodology:
-- `index.html` - Complete page with all 16 sections
-- `styles.css` - Unified stylesheet (~1600 lines)
+- `index.html` - Complete page with all sections (~1080 lines)
+- `styles.css` - Unified stylesheet (~1660 lines)
 - `robots.txt`, `sitemap.xml` - SEO files
 - `img/` - All images consolidated
 
 ## CSS Architecture (combined/styles.css)
 
-**Design Tokens** (lines 1-71): CSS variables for colors, typography, spacing, radii
+**Design Tokens** (lines 1-71): CSS variables defined in `:root`
+- Colors: `--color-primary` (#ff7d34), `--color-dark`, `--color-gray-*`
+- Typography: `--font-heading` (Poppins), `--font-body` (Inter)
+- Spacing: `--space-xs` through `--space-4xl`
+- Layout: `--container-width` (1920px), `--content-padding` (290px)
 
 **Base Components**:
-- `.btn` / `.btn--primary` / `.btn--outline` - Buttons
+- `.btn` / `.btn--primary` / `.btn--outline` - Buttons (60px height, full radius)
 - `.chip` / `.chip--light` - TOC chips
-- `.accordion` / `.accordion__item` - Collapsible FAQ/How-to sections
+- `.accordion` / `.accordion__item` - Collapsible sections with CSS transitions
 - `.card` / `.bonus-card` / `.match-card` / `.review-card` - Card variants
 
 **Section Classes** (BEM naming):
@@ -42,20 +46,24 @@ Production-ready assembled page using BEM methodology:
 
 ## JavaScript
 
-Inline `<script>` at end of `combined/index.html` handles:
-- IPL slider (auto-advance, dots navigation)
-- Match cards horizontal scroll
-- Reviews slider (prev/next buttons)
-- Accordion toggle (click anywhere on item)
+Inline `<script>` at end of `combined/index.html` (lines 930-1077) handles:
+- **IPL Slider**: Auto-advance every 5s, dots navigation, prev/next buttons
+- **Match Slider**: Horizontal scroll with 424px card width steps
+- **Reviews Slider**: Transform-based sliding, 2 cards visible at a time
+- **Accordion**: Click anywhere on item to toggle, CSS class `accordion__item--closed`
 
 ## Development
 
-No build step. Open `combined/index.html` in browser. Page width is fixed at 1920px.
+No build step required. Open `combined/index.html` directly in browser.
 
-## Adding New Sections
+**Layout**: Fixed 1920px width, not responsive. Content padding is 290px on each side.
 
-1. Read source from `sections/` folder (e.g., `sections/14. Footer/`)
-2. Convert to BEM class names
-3. Add HTML to `combined/index.html` in correct position
-4. Add CSS to `combined/styles.css` with section comment header
-5. Copy images to `combined/img/`
+**Previewing**: Use Live Server extension or `python -m http.server 8000` from `combined/` directory.
+
+## Converting Figma Exports to BEM
+
+When adding sections from `sections/` folder:
+1. Figma exports use auto-generated class names (e.g., `.frame-452656499`) - convert to semantic BEM names
+2. Figma uses percentage-based absolute positioning - convert to flexbox/grid layouts
+3. Each section comment in `styles.css` follows format: `/* SECTION: NAME */`
+4. Copy images to `combined/img/` with descriptive lowercase names
