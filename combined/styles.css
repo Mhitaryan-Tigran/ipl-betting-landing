@@ -1723,20 +1723,27 @@ table {
 }
 
 /*
-   RESPONSIVE - TABLET (max-width: 1200px)
+   RESPONSIVE - MOBILE (max-width: 768px)
                                                                 */
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   :root {
-    --content-padding: 60px;
-    --content-padding-wide: 20px;
+    --content-padding: 16px;
+    --content-padding-wide: 12px;
+    --text-3xl: 32px;
+    --text-2xl: 26px;
+    --text-xl: 22px;
+    --text-lg: 18px;
+    --text-base: 15px;
+    --space-section: 48px;
   }
 
   body {
-    gap: 60px;
+    gap: var(--space-section);
+    padding-bottom: var(--space-section);
   }
 
   main {
-    gap: 60px;
+    gap: var(--space-section);
   }
 
   .header,
@@ -1757,247 +1764,6 @@ table {
   .footer {
     width: 100%;
     max-width: 100%;
-  }
-
-  .hero {
-    flex-direction: column-reverse;
-    gap: var(--space-xl);
-  }
-
-  .hero__image {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-  }
-
-  .toc__list {
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-    padding: 0 var(--content-padding);
-  }
-
-  .toc__list::-webkit-scrollbar {
-    display: none;
-  }
-
-  .toc__row {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    width: max-content;
-    padding: 0;
-  }
-
-  .toc__row .chip {
-    width: auto !important;
-    flex-shrink: 0;
-  }
-
-  .ipl-slider__inner {
-    flex-direction: column;
-    padding: var(--space-3xl) var(--space-xl);
-    gap: var(--space-xl);
-  }
-
-  .ipl-visual {
-    width: 100%;
-    max-width: 400px;
-    height: 420px;
-  }
-
-  .ipl-visual__bg {
-    width: 350px;
-    height: 350px;
-    top: 40px;
-    left: 25px;
-  }
-
-  .ipl-visual__player {
-    width: 380px;
-    height: 400px;
-  }
-
-  .app-download {
-    flex-direction: column-reverse;
-    gap: var(--space-xl);
-  }
-
-  .app-download__image {
-    max-width: 500px;
-  }
-
-  .welcome-bonus__inner {
-    padding: var(--space-3xl) var(--space-xl);
-  }
-
-  .welcome-bonus__cards {
-    flex-direction: column;
-  }
-
-  .bonus-card {
-    width: 100%;
-  }
-
-  .bonus-card__content {
-    width: 100%;
-  }
-
-  .reasons,
-  .how-to-use,
-  .faq {
-    padding: 0 var(--content-padding-wide);
-  }
-
-  .reasons__inner,
-  .how-to-use__inner,
-  .faq__inner {
-    width: 100%;
-    padding: var(--space-xl);
-  }
-
-  .app-features__inner {
-    flex-direction: column;
-    padding: var(--space-xl);
-    gap: var(--space-xl);
-  }
-
-  .app-features__visual {
-    width: 100%;
-    max-width: 400px;
-    height: 420px;
-  }
-
-  .app-features__ellipse {
-    width: 300px;
-    height: 300px;
-    top: 60px;
-    left: 50px;
-  }
-
-  .app-features__phones {
-    left: 40px;
-    width: 200px;
-    height: 420px;
-  }
-
-  .app-features__phone--front {
-    width: 200px;
-    height: 420px;
-  }
-
-  .app-features__phone--back {
-    width: 180px;
-    height: 400px;
-  }
-
-  .app-features__phone-shadow {
-    width: 190px;
-    height: 415px;
-    border-radius: 40px;
-  }
-
-  .app-features__badge--support {
-    top: 100px;
-    left: 200px;
-  }
-
-  .app-features__badge--game {
-    top: 300px;
-    left: 200px;
-  }
-
-  .app-features__badge--tips {
-    top: 200px;
-    left: 180px;
-  }
-
-  .app-features__list-text {
-    white-space: normal;
-  }
-
-  .review-card {
-    width: 100%;
-    min-width: 300px;
-  }
-
-  .info-table__header,
-  .info-table__content {
-    padding: 0 var(--space-xl);
-  }
-
-  .info-table__rows {
-    padding: var(--space-xl);
-  }
-
-  .info-table__row {
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-  }
-
-  .info-table__label {
-    width: 100%;
-  }
-
-  .info-table__number {
-    display: none;
-  }
-
-  .how-to-download__inner {
-    padding: var(--space-xl);
-  }
-
-  .download-card {
-    flex-direction: column;
-    gap: var(--space-xl);
-  }
-
-  .download-card--reverse {
-    flex-direction: column-reverse;
-  }
-
-  .download-card__image {
-    width: 100%;
-    height: auto;
-  }
-
-  .footer__content {
-    flex-direction: column;
-    gap: var(--space-xl);
-    align-items: flex-start;
-  }
-
-  .footer__nav {
-    align-items: flex-start;
-  }
-
-  .footer__links {
-    flex-wrap: wrap;
-    gap: var(--space-md);
-  }
-}
-
-/*
-   RESPONSIVE - MOBILE (max-width: 768px)
-                                                                */
-@media (max-width: 768px) {
-  :root {
-    --content-padding: 20px;
-    --content-padding-wide: 16px;
-    --text-3xl: 36px;
-    --text-2xl: 28px;
-    --text-xl: 24px;
-    --text-lg: 20px;
-    --text-base: 16px;
-  }
-
-  body {
-    gap: 40px;
-    padding-bottom: 40px;
-  }
-
-  main {
-    gap: 40px;
   }
 
   /* Header */
@@ -2024,7 +1790,15 @@ table {
 
   /* Hero */
   .hero {
+    flex-direction: column-reverse;
+    gap: var(--space-xl);
     padding: 0 var(--content-padding);
+  }
+
+  .hero__image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
   }
 
   .hero__left {
@@ -2066,10 +1840,28 @@ table {
 
   .toc__list {
     gap: var(--space-sm);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 var(--content-padding);
+  }
+
+  .toc__list::-webkit-scrollbar {
+    display: none;
   }
 
   .toc__row {
     gap: var(--space-sm);
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: max-content;
+    padding: 0;
+  }
+
+  .toc__row .chip {
+    width: auto !important;
+    flex-shrink: 0;
   }
 
   .chip {
@@ -2080,7 +1872,9 @@ table {
 
   /* IPL Slider */
   .ipl-slider__inner {
-    padding: var(--space-xl) var(--space-md);
+    flex-direction: column;
+    padding: var(--space-xl) var(--space-lg);
+    gap: var(--space-lg);
   }
 
   .ipl-visual {
@@ -2124,7 +1918,33 @@ table {
     width: 48px;
   }
 
+  /* Reviews slider - scrollable on mobile */
+  .reviews__slider {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .reviews__slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .reviews__track {
+    transform: none !important;
+    width: max-content;
+  }
+
+  .reviews__nav {
+    display: none;
+  }
+
   /* App Download */
+  .app-download {
+    flex-direction: column-reverse;
+    gap: var(--space-xl);
+  }
+
   .app-download__image {
     max-width: 100%;
   }
@@ -2145,27 +1965,96 @@ table {
     width: 300px;
   }
 
+  .match-card__header {
+    text-align: center;
+    margin-bottom: var(--space-md);
+  }
+
+  .match-card__time {
+    justify-content: center;
+  }
+
   .match-card__teams {
-    flex-direction: column;
-    gap: var(--space-md);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-sm);
+    margin: var(--space-md) 0;
   }
 
   .match-card__team {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+  }
+
+  .match-card__team-name {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .match-card__vs {
+    font-size: 14px;
+  }
+
+  .match-card .btn {
     width: 100%;
-    justify-content: center;
   }
 
   /* Welcome Bonus */
   .welcome-bonus__inner {
-    padding: var(--space-xl) var(--space-md);
+    padding: var(--space-lg);
   }
 
   .welcome-bonus__header {
-    padding-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+  }
+
+  .welcome-bonus__cards {
+    flex-direction: column;
+    gap: var(--space-md);
   }
 
   .bonus-card {
+    width: 100%;
+    padding: var(--space-md);
+  }
+
+  .bonus-card__content {
+    width: 100%;
+  }
+
+  /* Reasons, How-to-use, FAQ */
+  .reasons,
+  .how-to-use,
+  .faq {
+    padding: 0 var(--content-padding-wide);
+  }
+
+  .reasons__inner,
+  .how-to-use__inner,
+  .faq__inner {
+    width: 100%;
     padding: var(--space-lg);
+  }
+
+  /* App Features */
+  .app-features__inner {
+    flex-direction: column;
+    padding: var(--space-lg);
+    gap: var(--space-lg);
+  }
+
+  .app-features__visual {
+    align-self: center;
+    transform: scale(0.55);
+    transform-origin: center top;
+    margin-bottom: -280px;
+  }
+
+  .app-features__list-text {
+    white-space: normal;
   }
 
   /* Accordion */
@@ -2181,84 +2070,6 @@ table {
     font-size: var(--text-base);
   }
 
-  /* App Features */
-  .app-features__visual {
-    max-width: 300px;
-    height: 350px;
-  }
-
-  .app-features__ellipse {
-    width: 220px;
-    height: 220px;
-    top: 60px;
-    left: 40px;
-  }
-
-  .app-features__phones {
-    left: 30px;
-    top: 40px;
-    width: 160px;
-    height: 340px;
-  }
-
-  .app-features__phone--front {
-    width: 160px;
-    height: 340px;
-  }
-
-  .app-features__phone--back {
-    width: 145px;
-    height: 320px;
-  }
-
-  .app-features__phone-shadow {
-    width: 150px;
-    height: 335px;
-    border-radius: 32px;
-  }
-
-  .app-features__badge {
-    padding: var(--space-xs) var(--space-sm);
-    gap: var(--space-sm);
-  }
-
-  .app-features__badge--support {
-    top: 80px;
-    left: 150px;
-  }
-
-  .app-features__badge--game {
-    top: 240px;
-    left: 150px;
-  }
-
-  .app-features__badge--tips {
-    top: 160px;
-    left: 130px;
-  }
-
-  .app-features__badge-icon {
-    width: 36px;
-    height: 36px;
-  }
-
-  .app-features__badge-icon img {
-    width: 18px;
-    height: 18px;
-  }
-
-  .app-features__badge-line {
-    height: 32px;
-  }
-
-  .app-features__badge-title {
-    font-size: var(--text-xs);
-  }
-
-  .app-features__badge-value {
-    font-size: 12px;
-  }
-
   /* Reviews */
   .reviews__header {
     flex-direction: column;
@@ -2267,13 +2078,15 @@ table {
   }
 
   .review-card {
+    width: 280px;
+    min-width: 280px;
     flex-direction: column;
     padding: var(--space-md);
   }
 
   .review-card__avatar {
     width: 100%;
-    height: 200px;
+    height: 150px;
   }
 
   /* Platforms */
@@ -2283,18 +2096,60 @@ table {
 
   /* Info Table */
   .info-table__inner {
-    padding: var(--space-xl) 0;
+    padding: var(--space-lg) 0;
+  }
+
+  .info-table__header,
+  .info-table__content {
+    padding: 0 var(--space-md);
+  }
+
+  .info-table__rows {
+    padding: var(--space-md);
+    gap: 4px;
   }
 
   .info-table__row {
-    padding: var(--space-md);
+    flex-wrap: nowrap;
+    padding: var(--space-sm) var(--space-md);
   }
 
   .info-table__label {
-    font-size: var(--text-base);
+    width: 110px;
+    flex-shrink: 0;
+    font-size: 13px;
+  }
+
+  .info-table__value {
+    font-size: 13px;
+    text-align: right;
+  }
+
+  .info-table__number {
+    display: none;
   }
 
   /* How to Download */
+  .how-to-download__inner {
+    padding: var(--space-lg);
+  }
+
+  .download-card {
+    flex-direction: column;
+    gap: var(--space-lg);
+    padding: var(--space-md);
+  }
+
+  .download-card--reverse {
+    flex-direction: column-reverse;
+  }
+
+  .download-card__image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+  }
+
   .download-card__content .btn {
     width: 100%;
   }
@@ -2357,41 +2212,8 @@ table {
   }
 
   .app-features__visual {
-    max-width: 260px;
-    height: 300px;
-  }
-
-  .app-features__badge {
-    display: none;
-  }
-
-  .app-features__ellipse {
-    width: 200px;
-    height: 200px;
-    top: 50px;
-    left: 30px;
-  }
-
-  .app-features__phones {
-    left: 50px;
-    top: 30px;
-    width: 140px;
-    height: 300px;
-  }
-
-  .app-features__phone--front {
-    width: 140px;
-    height: 300px;
-  }
-
-  .app-features__phone--back {
-    display: none;
-  }
-
-  .app-features__phone-shadow {
-    width: 130px;
-    height: 295px;
-    border-radius: 28px;
+    transform: scale(0.45);
+    margin-bottom: -340px;
   }
 
   .match-card {
