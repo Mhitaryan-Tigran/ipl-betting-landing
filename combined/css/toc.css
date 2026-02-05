@@ -1,0 +1,45 @@
+/*
+   SECTION: TOC
+                                                                */
+.toc {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding: var(--space-xl) var(--content-padding);
+  background-color: var(--color-white);
+}
+
+.toc__header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.toc__title {
+  color: var(--color-dark);
+}
+
+.toc__date {
+  font-size: var(--text-xs);
+  color: var(--color-gray);
+}
+
+.toc__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.toc__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.toc__row:first-child .chip {
+  width: 252px;
+}
+
+.toc__row:last-child .chip {
+  width: 206px;
+}

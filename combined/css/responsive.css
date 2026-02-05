@@ -1,0 +1,513 @@
+/*
+   RESPONSIVE - MOBILE (max-width: 768px)
+                                                                */
+@media (max-width: 768px) {
+  :root {
+    --content-padding: 16px;
+    --content-padding-wide: 12px;
+    --text-3xl: 32px;
+    --text-2xl: 26px;
+    --text-xl: 22px;
+    --text-lg: 18px;
+    --text-base: 15px;
+    --space-section: 48px;
+  }
+
+  body {
+    gap: var(--space-section);
+    padding-bottom: var(--space-section);
+  }
+
+  main {
+    gap: var(--space-section);
+  }
+
+  .header,
+  .hero,
+  .toc,
+  .ipl-slider,
+  .app-download,
+  .live-betting,
+  .welcome-bonus,
+  .reasons,
+  .app-features,
+  .how-to-use,
+  .reviews,
+  .platforms,
+  .info-table,
+  .how-to-download,
+  .faq,
+  .footer {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Header */
+  .header__inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--content-padding);
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .header__cta {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero {
+    flex-direction: column-reverse;
+    gap: var(--space-xl);
+    padding: 0 var(--content-padding);
+  }
+
+  .hero__image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .hero__left {
+    gap: var(--space-lg);
+  }
+
+  .hero__title {
+    padding-bottom: var(--space-lg);
+  }
+
+  .hero__cta .btn {
+    width: 100%;
+  }
+
+  .hero__social {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: var(--space-lg);
+  }
+
+  .avatars__item {
+    width: 48px;
+    height: 48px;
+  }
+
+  .avatars__item--overlay img {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* TOC */
+  .toc {
+    padding: var(--space-lg) 0;
+  }
+
+  .toc__header {
+    padding: 0 var(--content-padding);
+  }
+
+  .toc__list {
+    gap: var(--space-sm);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 var(--content-padding);
+  }
+
+  .toc__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .toc__row {
+    gap: var(--space-sm);
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: max-content;
+    padding: 0;
+  }
+
+  .toc__row .chip {
+    width: auto !important;
+    flex-shrink: 0;
+  }
+
+  .chip {
+    height: 48px;
+    padding: 0 var(--space-lg);
+    font-size: var(--text-xs);
+  }
+
+  /* IPL Slider */
+  .ipl-slider__inner {
+    flex-direction: column;
+    padding: var(--space-xl) var(--space-lg);
+    gap: var(--space-lg);
+  }
+
+  .ipl-visual {
+    max-width: 300px;
+    height: 320px;
+  }
+
+  .ipl-visual__bg {
+    width: 260px;
+    height: 260px;
+    top: 30px;
+    left: 20px;
+  }
+
+  .ipl-visual__player {
+    width: 280px;
+    height: 300px;
+  }
+
+  .ipl-visual__badge--winning {
+    top: 10px;
+    right: -10px;
+    padding: var(--space-sm);
+  }
+
+  .ipl-visual__badge--winning .heading {
+    font-size: var(--text-lg);
+  }
+
+  .slider__nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .slider__dot {
+    width: 24px;
+    height: 6px;
+  }
+
+  .slider__dot--active {
+    width: 48px;
+  }
+
+  /* Reviews slider - scrollable on mobile */
+  .reviews__slider {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .reviews__slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .reviews__track {
+    transform: none !important;
+    width: max-content;
+  }
+
+  .reviews__nav {
+    display: none;
+  }
+
+  /* App Download */
+  .app-download {
+    flex-direction: column-reverse;
+    gap: var(--space-xl);
+  }
+
+  .app-download__image {
+    max-width: 100%;
+  }
+
+  /* Live Betting */
+  .live-betting__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .live-betting__nav {
+    display: none;
+  }
+
+  .match-card {
+    flex: 0 0 300px;
+    width: 300px;
+  }
+
+  .match-card__header {
+    text-align: center;
+    margin-bottom: var(--space-md);
+  }
+
+  .match-card__time {
+    justify-content: center;
+  }
+
+  .match-card__teams {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-sm);
+    margin: var(--space-md) 0;
+  }
+
+  .match-card__team {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+  }
+
+  .match-card__team-name {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .match-card__vs {
+    font-size: 14px;
+  }
+
+  .match-card .btn {
+    width: 100%;
+  }
+
+  /* Welcome Bonus */
+  .welcome-bonus__inner {
+    padding: var(--space-lg);
+  }
+
+  .welcome-bonus__header {
+    padding-bottom: var(--space-lg);
+  }
+
+  .welcome-bonus__cards {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .bonus-card {
+    width: 100%;
+    padding: var(--space-md);
+  }
+
+  .bonus-card__content {
+    width: 100%;
+  }
+
+  /* Reasons, How-to-use, FAQ */
+  .reasons,
+  .how-to-use,
+  .faq {
+    padding: 0 var(--content-padding-wide);
+  }
+
+  .reasons__inner,
+  .how-to-use__inner,
+  .faq__inner {
+    width: 100%;
+    padding: var(--space-lg);
+  }
+
+  /* App Features */
+  .app-features__inner {
+    flex-direction: column;
+    padding: var(--space-lg);
+    gap: var(--space-lg);
+  }
+
+  .app-features__visual {
+    align-self: center;
+    transform: scale(0.55);
+    transform-origin: center top;
+    margin-bottom: -280px;
+  }
+
+  .app-features__list-text {
+    white-space: normal;
+  }
+
+  /* Accordion */
+  .accordion__item {
+    padding: var(--space-md);
+  }
+
+  .accordion__header {
+    padding-bottom: var(--space-md);
+  }
+
+  .accordion__title {
+    font-size: var(--text-base);
+  }
+
+  /* Reviews */
+  .reviews__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .review-card {
+    width: 280px;
+    min-width: 280px;
+    flex-direction: column;
+    padding: var(--space-md);
+  }
+
+  .review-card__avatar {
+    width: 100%;
+    height: 150px;
+  }
+
+  /* Platforms */
+  .platforms__header .heading {
+    font-size: var(--text-xl);
+  }
+
+  /* Info Table */
+  .info-table__inner {
+    padding: var(--space-lg) 0;
+  }
+
+  .info-table__header,
+  .info-table__content {
+    padding: 0 var(--space-md);
+  }
+
+  .info-table__rows {
+    padding: var(--space-md);
+    gap: 4px;
+  }
+
+  .info-table__row {
+    flex-wrap: nowrap;
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .info-table__label {
+    width: 110px;
+    flex-shrink: 0;
+    font-size: 13px;
+  }
+
+  .info-table__value {
+    font-size: 13px;
+    text-align: right;
+  }
+
+  .info-table__number {
+    display: none;
+  }
+
+  /* How to Download */
+  .how-to-download__inner {
+    padding: var(--space-lg);
+  }
+
+  .download-card {
+    flex-direction: column;
+    gap: var(--space-lg);
+    padding: var(--space-md);
+  }
+
+  .download-card--reverse {
+    flex-direction: column-reverse;
+  }
+
+  .download-card__image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+  }
+
+  .download-card__content .btn {
+    width: 100%;
+  }
+
+  /* Footer */
+  .footer {
+    display: none;
+  }
+}
+
+/*
+   RESPONSIVE - SMALL MOBILE (max-width: 480px)
+                                                                */
+@media (max-width: 480px) {
+  :root {
+    --text-3xl: 28px;
+    --text-2xl: 24px;
+    --text-xl: 20px;
+  }
+
+  .btn {
+    height: 52px;
+    padding: 0 var(--space-xl);
+    font-size: var(--text-sm);
+  }
+
+  .btn--wide {
+    width: 100%;
+  }
+
+  .hero__image {
+    max-width: 100%;
+  }
+
+  .chip {
+    height: 40px;
+    padding: 0 var(--space-md);
+    font-size: 12px;
+  }
+
+  .ipl-visual {
+    max-width: 260px;
+    height: 280px;
+  }
+
+  .ipl-visual__bg {
+    width: 220px;
+    height: 220px;
+    top: 30px;
+    left: 20px;
+  }
+
+  .ipl-visual__player {
+    width: 240px;
+    height: 260px;
+  }
+
+  .ipl-visual__badge--winning {
+    display: none;
+  }
+
+  .app-features__visual {
+    transform: scale(0.45);
+    margin-bottom: -340px;
+  }
+
+  .match-card {
+    flex: 0 0 280px;
+    width: 280px;
+  }
+
+  .review-card__avatar {
+    height: 160px;
+  }
+
+  .download-card__image {
+    height: 250px;
+    object-fit: contain;
+  }
+
+  .footer__links {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+}

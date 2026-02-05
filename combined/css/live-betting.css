@@ -1,0 +1,23 @@
+/*
+   SECTION: LIVE BETTING
+                                                                */
+.live-betting {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  padding: 0 var(--content-padding);
+  width: var(--container-width);
+}
+
+.live-betting__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-xl);
+}
+
+.live-betting__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}

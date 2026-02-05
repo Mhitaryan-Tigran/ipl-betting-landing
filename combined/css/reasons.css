@@ -1,0 +1,26 @@
+/*
+   SECTION: REASONS
+                                                                */
+.reasons {
+  width: var(--container-width);
+  padding: 0 var(--content-padding);
+}
+
+.reasons__inner {
+  display: flex;
+  flex-direction: column;
+  width: 1340px;
+  padding: 64px 52px;
+  background-color: var(--color-bg);
+  border-radius: var(--radius-xl);
+}
+
+.reasons__inner > header {
+  padding-bottom: var(--space-xl);
+}
+
+.reasons__cta {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--space-xl);
+}

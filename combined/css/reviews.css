@@ -1,0 +1,112 @@
+/*
+   SECTION: REVIEWS
+                                                                */
+.reviews {
+  width: var(--container-width);
+  padding: 0 var(--content-padding);
+}
+
+.reviews__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-xl);
+}
+
+.reviews__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.reviews__nav-btn {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, opacity 0.2s;
+  cursor: pointer;
+}
+
+.reviews__nav-btn:hover {
+  transform: scale(1.1);
+}
+
+.reviews__nav-btn img {
+  width: 52px;
+  height: 52px;
+}
+
+.reviews__slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.reviews__track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.4s ease;
+}
+
+.review-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  width: 658px;
+  flex-shrink: 0;
+  padding: var(--space-sm) var(--space-lg) var(--space-sm) var(--space-sm);
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+}
+
+.review-card__avatar {
+  width: 200px;
+  height: 240px;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.review-card__avatar--placeholder {
+  background-color: #d9d9d9;
+}
+
+.review-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.review-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.review-card__name {
+  font-family: var(--font-heading);
+  font-weight: var(--font-bold);
+  font-size: var(--text-lg);
+  color: var(--color-dark);
+}
+
+.review-card__rating {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.review-card__rating img {
+  width: 19px;
+  height: 18px;
+}
+
+.review-card__text {
+  font-family: var(--font-body);
+  font-weight: var(--font-medium);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-gray);
+}

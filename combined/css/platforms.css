@@ -1,0 +1,18 @@
+/*
+   SECTION: PLATFORMS (Android & IOS)
+                                                                */
+.platforms {
+  display: flex;
+  flex-direction: column;
+  width: var(--container-width);
+  padding: 0 var(--content-padding);
+}
+
+.platforms__header {
+  padding-bottom: var(--space-xl);
+}
+
+.platforms__image {
+  width: 100%;
+  height: auto;
+}

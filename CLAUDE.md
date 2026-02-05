@@ -46,17 +46,30 @@ Production-ready assembled page using BEM methodology:
 
 ## JavaScript
 
-Inline `<script>` at end of `combined/index.html` (lines 930-1077) handles:
+Inline `<script>` at end of `combined/index.html` (lines 937-1107) handles:
 - **IPL Slider**: Auto-advance every 5s, dots navigation, prev/next buttons
 - **Match Slider**: Horizontal scroll with 424px card width steps
 - **Reviews Slider**: Transform-based sliding, 2 cards visible at a time
 - **Accordion**: Click anywhere on item to toggle, CSS class `accordion__item--closed`
+- **Mobile Menu**: Burger toggle for mobile navigation
+
+## Responsive Design
+
+The page includes mobile responsive styles (combined/styles.css lines 1729-2238):
+- **Tablet/Mobile** (max-width: 768px): Stacked layouts, smaller typography, burger menu, horizontal scroll for sliders
+- **Small Mobile** (max-width: 480px): Further reduced sizes, some elements hidden
+
+Key mobile adaptations:
+- Header shows burger menu instead of nav links
+- Hero and feature sections stack vertically
+- Sliders become horizontally scrollable
+- Footer is hidden on mobile
 
 ## Development
 
 No build step required. Open `combined/index.html` directly in browser.
 
-**Layout**: Fixed 1920px width, not responsive. Content padding is 290px on each side.
+**Layout**: Desktop-first design at 1920px width with mobile breakpoints. Content padding is 290px on desktop, 16px on mobile.
 
 **Previewing**: Use Live Server extension or `python -m http.server 8000` from `combined/` directory.
 

@@ -1,0 +1,14 @@
+/*
+   SECTION: HEADER
+                                                                */
+.header {
+  width: var(--container-width);
+  padding-top: var(--space-lg);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--content-padding);
+}

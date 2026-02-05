@@ -1,0 +1,63 @@
+/*
+   SECTION: HOW TO DOWNLOAD
+                                                                */
+.how-to-download {
+  width: var(--container-width);
+  padding: 0 var(--content-padding-wide);
+}
+
+.how-to-download__inner {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4xl) 258px;
+  background-color: var(--color-bg);
+  border-radius: var(--radius-xl);
+}
+
+.how-to-download__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+.how-to-download__header .text {
+  max-width: 740px;
+}
+
+.how-to-download__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.download-card {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: var(--space-xl);
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+}
+
+.download-card__image {
+  width: 620px;
+  height: 402px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  flex-shrink: 0;
+}
+
+.download-card__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.download-card__content .heading {
+  padding-bottom: var(--space-lg);
+}
+
+.download-card__content .text {
+  padding-bottom: var(--space-xl);
+}

@@ -1,0 +1,33 @@
+/*
+   SECTION: APP DOWNLOAD
+                                                                */
+.app-download {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: 0 var(--content-padding);
+  width: var(--container-width);
+}
+
+.app-download__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.app-download__content > header {
+  padding-bottom: var(--space-lg);
+}
+
+.app-download__content > .text {
+  padding-bottom: var(--space-lg);
+}
+
+.app-download__apps {
+  padding-top: var(--space-lg);
+}
+
+.app-download__image {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,35 @@
+/*
+   SECTION: WELCOME BONUS
+                                                                */
+.welcome-bonus {
+  width: var(--container-width);
+  padding: 0 var(--content-padding-wide);
+}
+
+.welcome-bonus__inner {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4xl) 258px;
+  background-color: #120E0B;
+  border-radius: var(--radius-xl);
+}
+
+.heading--bonus {
+  color: var(--color-white);
+}
+
+.welcome-bonus__header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: var(--space-3xl);
+}
+
+.welcome-bonus__header .heading {
+  padding-bottom: var(--space-xl);
+}
+
+.welcome-bonus__cards {
+  display: flex;
+  gap: 20px;
+}
