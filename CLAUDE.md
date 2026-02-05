@@ -22,7 +22,22 @@ Production-ready assembled page using BEM methodology:
 - `css/` - Modular stylesheets (20 files)
 - `js/` - Modular JavaScript (6 files)
 - `robots.txt`, `sitemap.xml` - SEO files
-- `img/` - All images consolidated
+- `img/` - Images organized in subdirectories
+
+## Image Architecture (`combined/img/`)
+
+Modular image structure organized by section:
+
+- `hero/` - Hero section: main.png, avatar-1.png to avatar-4.png
+- `ipl-slider/` - IPL slider: player.png, badge-icon.svg, arrow-prev.svg, arrow-next.svg
+- `app-download/` - App download: phone.png, store-buttons.svg
+- `live-betting/` - Live betting: arrow-prev.svg, arrow-next.svg
+- `welcome-bonus/` - Welcome bonus: icon-1.png, icon-2.png, icon-3.png
+- `app-features/` - App features: phone-front.png, phone-back.png, icon-support.svg, icon-game.svg, icon-tips.svg, checkmark.svg
+- `reviews/` - Reviews: avatar-1.svg, avatar-2.svg, arrow-prev.svg, arrow-next.svg, star-filled.svg, star-empty.svg
+- `platforms/` - Platforms: brands.svg
+- `how-to-download/` - How to download: android.svg, ios.png
+- `icons/` - Shared icons: facebook.svg, telegram.svg, twitter.svg, instagram.svg, accordion-arrow.svg
 
 ## CSS Architecture (`combined/css/`)
 
@@ -88,4 +103,4 @@ When adding sections from `sections/` folder:
 1. Figma exports use auto-generated class names (e.g., `.frame-452656499`) - convert to semantic BEM names
 2. Figma uses percentage-based absolute positioning - convert to flexbox/grid layouts
 3. Create a new CSS file in `css/` folder for section-specific styles
-4. Copy images to `combined/img/` with descriptive lowercase names
+4. Copy images to appropriate `combined/img/{section}/` folder with descriptive lowercase names
