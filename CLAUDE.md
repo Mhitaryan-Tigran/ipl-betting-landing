@@ -31,7 +31,7 @@ Modular image structure organized by section:
 - `hero/` - Hero section: main.png, avatar-1.png to avatar-4.png
 - `ipl-slider/` - IPL slider: player.png, badge-icon.svg, arrow-prev.svg, arrow-next.svg
 - `app-download/` - App download: phone.png, store-buttons.svg
-- `live-betting/` - Live betting: arrow-prev.svg, arrow-next.svg
+- `live-betting/` - Live betting: arrow-prev.svg, arrow-next.svg, team logos (chennai-super-kings.svg, kolkata-knight-riders.svg, mumbai-indians.svg, rajasthan-royals.svg, royal-challengers.svg, sunrisers-hyderabad.svg)
 - `welcome-bonus/` - Welcome bonus: icon-1.png, icon-2.png, icon-3.png
 - `app-features/` - App features: phone-front.png, phone-back.png, icon-support.svg, icon-game.svg, icon-tips.svg, checkmark.svg
 - `reviews/` - Reviews: avatar-1.svg, avatar-2.svg, arrow-prev.svg, arrow-next.svg, star-filled.svg, star-empty.svg
