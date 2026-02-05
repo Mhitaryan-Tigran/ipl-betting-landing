@@ -8,8 +8,8 @@ Static HTML/CSS landing page for IPL betting app. Originally exported from Figma
 
 ## Architecture
 
-### Source Sections (1-14 folders)
-Original Figma exports. Each folder contains:
+### Source Sections (`sections/`)
+Original Figma exports in 14 numbered folders. Each contains:
 - `index.html` - Section markup with auto-generated class names
 - `style.css` - Section styles with percentage-based positioning
 - `styleguide.css` - Design tokens
@@ -20,6 +20,7 @@ Original Figma exports. Each folder contains:
 Production-ready assembled page using BEM methodology:
 - `index.html` - Complete page with all 16 sections
 - `styles.css` - Unified stylesheet (~1600 lines)
+- `robots.txt`, `sitemap.xml` - SEO files
 - `img/` - All images consolidated
 
 ## CSS Architecture (combined/styles.css)
@@ -53,7 +54,7 @@ No build step. Open `combined/index.html` in browser. Page width is fixed at 192
 
 ## Adding New Sections
 
-1. Read source from numbered folder (e.g., `14. Footer/`)
+1. Read source from `sections/` folder (e.g., `sections/14. Footer/`)
 2. Convert to BEM class names
 3. Add HTML to `combined/index.html` in correct position
 4. Add CSS to `combined/styles.css` with section comment header
