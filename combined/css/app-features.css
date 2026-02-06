@@ -87,20 +87,20 @@
 }
 
 .app-features__badge--support {
-  top: 139px;
-  left: 274px;
+  top: 22.42%;
+  left: 45.67%;
   z-index: 1;
 }
 
 .app-features__badge--game {
-  top: 395px;
-  left: 274px;
+  top: 63.71%;
+  left: 45.67%;
   z-index: 1;
 }
 
 .app-features__badge--tips {
-  top: 267px;
-  left: 242px;
+  top: 43.06%;
+  left: 40.33%;
   z-index: 3;
 }
 
