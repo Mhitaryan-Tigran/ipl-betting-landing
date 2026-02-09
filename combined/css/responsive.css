@@ -1,26 +1,21 @@
 /*
-   RESPONSIVE - TABLET (max-width: 1024px)
+   RESPONSIVE - IMAGE STACKING (max-width: 1600px)
+   Images move to top of sections, layouts stack vertically
                                                                 */
-@media (max-width: 1024px) {
-  :root {
-    --text-3xl: 48px;
-    --text-2xl: 38px;
-    --text-xl: 28px;
-  }
-
-  /* Hero - stack on tablet */
+@media (max-width: 1600px) {
+  /* Hero - image on top */
   .hero {
     flex-direction: column-reverse;
     gap: var(--space-xl);
   }
 
   .hero__image {
-    max-width: 500px;
+    max-width: 600px;
     width: 100%;
     height: auto;
   }
 
-  /* App Download - stack */
+  /* App Download - image on top */
   .app-download {
     flex-direction: column-reverse;
     gap: var(--space-xl);
@@ -30,7 +25,7 @@
     max-width: 100%;
   }
 
-  /* App Features - stack */
+  /* App Features - visual on top */
   .app-features__inner {
     flex-direction: column;
     gap: var(--space-xl);
@@ -38,9 +33,60 @@
 
   .app-features__visual {
     align-self: center;
-    transform: scale(0.7);
-    transform-origin: center top;
-    margin-bottom: -180px;
+    max-width: 500px;
+  }
+
+  /* IPL Slider - image on top */
+  .ipl-slider__inner {
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .ipl-slider__image {
+    max-width: 100%;
+  }
+
+  .ipl-visual {
+    align-self: center;
+  }
+
+  /* Download cards - image on top */
+  .download-card {
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .download-card--reverse {
+    flex-direction: column-reverse;
+  }
+
+  .download-card__image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*
+   RESPONSIVE - TABLET (max-width: 1200px)
+                                                                */
+@media (max-width: 1200px) {
+  :root {
+    --text-3xl: 48px;
+    --text-2xl: 38px;
+    --text-xl: 28px;
+  }
+
+  /* Header - burger on tablet */
+  .nav {
+    display: none;
+  }
+
+  .header__cta {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
   }
 
   /* Welcome Bonus - stack cards */
@@ -57,54 +103,9 @@
     width: 100%;
   }
 
-  /* Header - burger on tablet */
-  .nav {
-    display: none;
-  }
-
-  .header__cta {
-    display: none;
-  }
-
-  .burger {
-    display: flex;
-  }
-
-  /* IPL Slider - stack */
-  .ipl-slider__inner {
-    flex-direction: column;
-    gap: var(--space-xl);
-  }
-
-  /* Download cards - stack */
-  .download-card {
-    flex-direction: column;
-    gap: var(--space-xl);
-  }
-
-  .download-card--reverse {
-    flex-direction: column-reverse;
-  }
-
-  .download-card__image {
-    width: 100%;
-    height: auto;
-  }
-
   /* Main spacing reduction */
   main {
     gap: var(--space-3xl);
-    margin-top: var(--space-3xl);
-    margin-bottom: var(--space-3xl);
-  }
-
-  /* IPL visual - center in stacked layout */
-  .ipl-slider__image {
-    max-width: 100%;
-  }
-
-  .ipl-visual {
-    align-self: center;
   }
 
   /* Sections - reduce inner padding */
@@ -119,7 +120,18 @@
   }
 
   .info-table__label {
-    width: 200px;
+    width: 25%;
+    min-width: 140px;
+  }
+
+  /* Platforms - 2 columns on tablet */
+  .platforms__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* App Features - smaller visual */
+  .app-features__visual {
+    max-width: 400px;
   }
 
   /* Footer - stack on tablet */
@@ -280,19 +292,6 @@
 
   .ipl-visual {
     max-width: 300px;
-    height: 320px;
-  }
-
-  .ipl-visual__bg {
-    width: 260px;
-    height: 260px;
-    top: 30px;
-    left: 20px;
-  }
-
-  .ipl-visual__player {
-    width: 280px;
-    height: 300px;
   }
 
   .slider__nav {
@@ -352,8 +351,8 @@
   }
 
   .match-card {
-    flex: 0 0 300px;
-    width: 300px;
+    flex: 0 0 clamp(280px, 80vw, 300px);
+    width: clamp(280px, 80vw, 300px);
   }
 
   .match-card__header {
@@ -441,9 +440,7 @@
 
   .app-features__visual {
     align-self: center;
-    transform: scale(0.55);
-    transform-origin: center top;
-    margin-bottom: -280px;
+    max-width: 300px;
   }
 
   .app-features__list-text {
@@ -479,7 +476,7 @@
 
   .review-card__avatar {
     width: 100%;
-    height: 150px;
+    aspect-ratio: 4 / 3;
   }
 
   /* Platforms */
@@ -516,7 +513,8 @@
   }
 
   .info-table__label {
-    width: 110px;
+    width: 30%;
+    min-width: 90px;
     flex-shrink: 0;
     font-size: 13px;
   }
@@ -610,37 +608,23 @@
 
   .ipl-visual {
     max-width: 260px;
-    height: 280px;
-  }
-
-  .ipl-visual__bg {
-    width: 220px;
-    height: 220px;
-    top: 30px;
-    left: 20px;
-  }
-
-  .ipl-visual__player {
-    width: 240px;
-    height: 260px;
   }
 
   .app-features__visual {
-    transform: scale(0.45);
-    margin-bottom: -340px;
+    max-width: 260px;
   }
 
   .match-card {
-    flex: 0 0 280px;
-    width: 280px;
+    flex: 0 0 clamp(260px, 75vw, 280px);
+    width: clamp(260px, 75vw, 280px);
   }
 
   .review-card__avatar {
-    height: 160px;
+    aspect-ratio: 5 / 4;
   }
 
   .download-card__image {
-    height: 250px;
+    max-height: 250px;
     object-fit: contain;
   }
 

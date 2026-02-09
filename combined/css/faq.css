@@ -10,7 +10,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1340px;
+  max-width: 1340px;
+  width: 100%;
   padding: 64px 52px;
   background-color: var(--color-bg);
   border-radius: var(--radius-xl);

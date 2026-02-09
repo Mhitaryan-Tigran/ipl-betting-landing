@@ -125,7 +125,8 @@
 }
 
 .btn--wide {
-  width: 256px;
+  max-width: 256px;
+  width: 100%;
 }
 
 /*
@@ -564,7 +565,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 347px;
+  max-width: 347px;
+  width: 100%;
 }
 
 .bonus-card__title {

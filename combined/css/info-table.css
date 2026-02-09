@@ -15,11 +15,11 @@
 }
 
 .info-table__header {
-  padding: 0 258px var(--space-xl);
+  padding: 0 var(--section-padding-inner) var(--space-xl);
 }
 
 .info-table__content {
-  padding: 0 258px;
+  padding: 0 var(--section-padding-inner);
 }
 
 .info-table__rows {
@@ -40,7 +40,9 @@
 }
 
 .info-table__label {
-  width: 320px;
+  max-width: 320px;
+  width: 30%;
+  flex-shrink: 0;
   font-family: var(--font-heading);
   font-weight: var(--font-semibold);
   font-size: 20px;

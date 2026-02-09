@@ -4,7 +4,7 @@
 .app-download {
   display: flex;
   align-items: center;
-  gap: 80px;
+  gap: var(--gap-section);
   padding: 0 var(--content-padding);
   width: var(--container-width);
 }

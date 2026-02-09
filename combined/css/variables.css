@@ -62,7 +62,10 @@
   --radius-full: 100px;
 
   /* Layout */
-  --container-width: 1920px;
-  --content-padding: 290px;
+  --container-width: min(1920px, 100%);
+  --content-padding: clamp(16px, 15.1vw, 290px);
   --content-padding-wide: 32px;
+  --section-padding-inner: clamp(24px, 13.44vw, 258px);
+  --gap-section: clamp(32px, 4.17vw, 80px);
+  --section-gap-vertical: clamp(48px, 5.21vw, 100px);
 }

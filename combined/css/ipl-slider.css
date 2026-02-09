@@ -9,8 +9,8 @@
 .ipl-slider__inner {
   display: flex;
   align-items: center;
-  gap: clamp(32px, 4vw, 80px);
-  padding: var(--space-4xl) var(--content-padding);
+  gap: var(--gap-section);
+  padding: var(--space-4xl) var(--section-padding-inner);
   background-color: var(--color-bg);
   border-radius: var(--radius-xl);
   overflow: hidden;
@@ -20,7 +20,7 @@
   position: relative;
   max-width: 600px;
   width: 100%;
-  height: 620px;
+  aspect-ratio: 600 / 620;
   background-color: var(--color-white);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -44,26 +44,25 @@
   position: relative;
   max-width: 600px;
   width: 100%;
-  height: 620px;
-  overflow: hidden;
+  aspect-ratio: 600 / 620;
 }
 
 .ipl-visual__bg {
   position: absolute;
-  top: 78px;
+  top: 12.58%;
   left: 0;
-  width: 530px;
-  height: 530px;
+  width: 88.33%;
+  aspect-ratio: 1;
   background-color: #F3F4F5;
   border-radius: 50%;
 }
 
 .ipl-visual__player {
   position: absolute;
-  top: 10px;
+  top: 1.61%;
   left: 0;
-  width: 580px;
-  height: 610px;
+  width: 96.67%;
+  height: auto;
   object-fit: contain;
 }
 

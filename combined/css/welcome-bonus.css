@@ -9,7 +9,7 @@
 .welcome-bonus__inner {
   display: flex;
   flex-direction: column;
-  padding: var(--space-4xl) 258px;
+  padding: var(--space-4xl) var(--section-padding-inner);
   background-color: #120E0B;
   border-radius: var(--radius-xl);
 }

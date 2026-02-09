@@ -9,7 +9,8 @@
 .how-to-use__inner {
   display: flex;
   flex-direction: column;
-  width: 1340px;
+  max-width: 1340px;
+  width: 100%;
   padding: 64px 52px;
   background-color: var(--color-bg);
   border-radius: var(--radius-xl);

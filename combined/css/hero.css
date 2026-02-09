@@ -28,7 +28,8 @@
 }
 
 .hero__image {
-  width: 672px;
-  height: 680px;
+  max-width: 672px;
+  width: 100%;
+  height: auto;
   object-fit: contain;
 }
