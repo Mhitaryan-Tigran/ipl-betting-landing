@@ -44,6 +44,34 @@ function initIplSlider() {
       dot.addEventListener('click', () => updateSlider(i));
     });
 
+    // Swipe support (touch + mouse drag)
+    let startX = 0;
+    let dragging = false;
+
+    function onStart(x) {
+      startX = x;
+      dragging = true;
+    }
+
+    function onEnd(x) {
+      if (!dragging) return;
+      dragging = false;
+      const diff = startX - x;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) {
+          updateSlider((currentSlide + 1) % totalSlides);
+        } else {
+          updateSlider((currentSlide - 1 + totalSlides) % totalSlides);
+        }
+      }
+    }
+
+    slider.addEventListener('touchstart', e => onStart(e.touches[0].clientX), { passive: true });
+    slider.addEventListener('touchend', e => onEnd(e.changedTouches[0].clientX));
+    slider.addEventListener('mousedown', e => { e.preventDefault(); onStart(e.clientX); });
+    slider.addEventListener('mouseup', e => onEnd(e.clientX));
+    slider.addEventListener('mouseleave', () => { dragging = false; });
+
     setInterval(() => {
       updateSlider((currentSlide + 1) % totalSlides);
     }, 5000);

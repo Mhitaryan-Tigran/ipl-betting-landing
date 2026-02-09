@@ -13,6 +13,8 @@ function initMobileMenu() {
       mobileNav.classList.toggle('mobile-nav--open');
       const isOpen = mobileNav.classList.contains('mobile-nav--open');
       burger.setAttribute('aria-expanded', isOpen);
+      document.documentElement.style.overflow = isOpen ? 'hidden' : '';
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
     // Close menu when clicking a link
@@ -21,6 +23,8 @@ function initMobileMenu() {
         burger.classList.remove('burger--active');
         mobileNav.classList.remove('mobile-nav--open');
         burger.setAttribute('aria-expanded', 'false');
+        document.documentElement.style.overflow = '';
+        document.body.style.overflow = '';
       });
     });
   }

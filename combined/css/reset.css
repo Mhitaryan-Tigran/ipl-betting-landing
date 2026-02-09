@@ -24,7 +24,6 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   gap: var(--section-gap-vertical);
-  padding-bottom: var(--section-gap-vertical);
   background-color: var(--color-white);
   font-family: var(--font-body);
   color: var(--color-dark);

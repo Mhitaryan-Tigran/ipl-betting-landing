@@ -39,6 +39,35 @@ function initReviewsSlider() {
       }
     });
 
+    // Swipe support (touch + mouse drag)
+    let startX = 0;
+    let dragging = false;
+
+    function onStart(x) {
+      startX = x;
+      dragging = true;
+    }
+
+    function onEnd(x) {
+      if (!dragging) return;
+      dragging = false;
+      const diff = startX - x;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0 && currentIndex < maxIndex) {
+          currentIndex++;
+        } else if (diff < 0 && currentIndex > 0) {
+          currentIndex--;
+        }
+        updateSlider();
+      }
+    }
+
+    reviewsSlider.addEventListener('touchstart', e => onStart(e.touches[0].clientX), { passive: true });
+    reviewsSlider.addEventListener('touchend', e => onEnd(e.changedTouches[0].clientX));
+    reviewsSlider.addEventListener('mousedown', e => { e.preventDefault(); onStart(e.clientX); });
+    reviewsSlider.addEventListener('mouseup', e => onEnd(e.clientX));
+    reviewsSlider.addEventListener('mouseleave', () => { dragging = false; });
+
     updateSlider();
   }
 }
