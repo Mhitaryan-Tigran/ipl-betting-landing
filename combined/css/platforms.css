@@ -12,7 +12,13 @@
   padding-bottom: var(--space-xl);
 }
 
-.platforms__image {
+.platforms__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+}
+
+.platforms__grid img {
   width: 100%;
   height: auto;
 }

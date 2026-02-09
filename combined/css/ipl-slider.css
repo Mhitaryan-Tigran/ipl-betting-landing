@@ -9,8 +9,8 @@
 .ipl-slider__inner {
   display: flex;
   align-items: center;
-  gap: 80px;
-  padding: var(--space-4xl) 258px;
+  gap: clamp(32px, 4vw, 80px);
+  padding: var(--space-4xl) var(--content-padding);
   background-color: var(--color-bg);
   border-radius: var(--radius-xl);
   overflow: hidden;
@@ -18,7 +18,8 @@
 
 .ipl-slider__image {
   position: relative;
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   height: 620px;
   background-color: var(--color-white);
   border-radius: var(--radius-lg);
@@ -41,8 +42,10 @@
                                                                 */
 .ipl-visual {
   position: relative;
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   height: 620px;
+  overflow: hidden;
 }
 
 .ipl-visual__bg {
@@ -73,11 +76,6 @@
   background-color: var(--color-white);
   border-radius: var(--radius-md);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.ipl-visual__badge--winning {
-  top: 25px;
-  right: 0;
 }
 
 .ipl-visual__badge--chart {

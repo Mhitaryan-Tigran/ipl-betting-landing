@@ -113,7 +113,7 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header">
+    <div class="header">
       <div class="header__inner">
         <a href="/" class="logo" aria-label="IPL Betting App Home">
           <div class="logo__icon">
@@ -146,7 +146,7 @@
         <a href="#faq" class="mobile-nav__link">FAQ</a>
         <a href="#" class="btn btn--primary mobile-nav__cta">Bet Now</a>
       </nav>
-    </header>
+    </div>
 
     <main>
       <!-- Hero -->
@@ -183,7 +183,7 @@
       <!-- TOC -->
       <nav class="toc" aria-label="Table of contents">
         <div class="toc__header">
-          <h2 class="heading heading--xl toc__title">Content Table</h2>
+          <h2 class="heading heading--xl toc__title">Table of Contents</h2>
           <p class="toc__date">Update: 07.05.2024</p>
         </div>
         <ul class="toc__list">
@@ -210,16 +210,9 @@
           <figure class="ipl-visual">
             <div class="ipl-visual__bg"></div>
             <img class="ipl-visual__player" src="img/ipl-slider/player.png" alt="Cricket player illustration" />
-            <div class="ipl-visual__badge ipl-visual__badge--winning">
-              <span class="text text--xs">Your winning</span>
-              <strong class="heading heading--lg">$1 300</strong>
-              <img src="img/ipl-slider/badge-icon.svg" alt="" aria-hidden="true" />
-            </div>
           </figure>
-          <article class="ipl-slider__content slider" data-slider="ipl">
-            <header>
-              <h2 id="ipl-title" class="heading heading--2xl">Indian Premier League</h2>
-            </header>
+          <div class="ipl-slider__content slider" data-slider="ipl">
+            <h2 id="ipl-title" class="heading heading--2xl">Indian Premier League</h2>
             <div class="slider__container">
               <div class="slider__track">
                 <p class="text slider__slide slider__slide--active" data-slide="0">
@@ -259,16 +252,14 @@
                 <img src="img/ipl-slider/arrow-next.svg" alt="" aria-hidden="true" />
               </button>
             </nav>
-          </article>
+          </div>
         </div>
       </section>
 
       <!-- App Download -->
       <section class="app-download" id="download" aria-labelledby="download-title">
-        <article class="app-download__content">
-          <header>
-            <h2 id="download-title" class="heading heading--2xl">IPL Win Betting App Download</h2>
-          </header>
+        <div class="app-download__content">
+          <h2 id="download-title" class="heading heading--2xl">IPL Win Betting App Download</h2>
           <p class="text">
             With our app, you can watch live broadcasts and receive countless statistics, tips, and even match
             predictions which will help you place better bets and improve your odds of winning. There are many betting
@@ -280,7 +271,7 @@
               <img src="img/app-download/store-buttons.svg" alt="Download on Google Play and App Store" />
             </a>
           </div>
-        </article>
+        </div>
         <figure>
           <img class="app-download__image" src="img/app-download/phone.png" alt="IPL Win Betting App interface" />
         </figure>
@@ -288,7 +279,7 @@
 
       <!-- Live Betting -->
       <section class="live-betting" id="betting" aria-labelledby="betting-title" data-match-slider>
-        <header class="live-betting__header">
+        <div class="live-betting__header">
           <h2 id="betting-title" class="heading heading--2xl">IPL Live Cricket Betting</h2>
           <nav class="live-betting__nav" aria-label="Match slider navigation">
             <button class="slider__btn match-prev" aria-label="Previous match">
@@ -298,16 +289,16 @@
               <img src="img/live-betting/arrow-next.svg" alt="" aria-hidden="true" />
             </button>
           </nav>
-        </header>
+        </div>
         <div class="match-slider">
-          <article class="match-card">
-            <header class="match-card__header">
+          <div class="match-card">
+            <div class="match-card__header">
               <h3 class="match-card__venue">Rajiv Gandhi International Stadium, Hyderabad</h3>
               <div class="match-card__time">
                 <time datetime="2024-05-19T17:30">Sunday, May 19</time>
                 <time>17:30 pm IST</time>
               </div>
-            </header>
+            </div>
             <div class="match-card__teams">
               <div class="match-card__team">
                 <img class="match-card__team-logo" src="img/live-betting/sunrisers-hyderabad.svg" alt="Sunrisers Hyderabad" />
@@ -326,15 +317,15 @@
               </div>
             </div>
             <a href="#" class="btn btn--primary">Bet Now</a>
-          </article>
-          <article class="match-card">
-            <header class="match-card__header">
+          </div>
+          <div class="match-card">
+            <div class="match-card__header">
               <h3 class="match-card__venue">Wankhede Stadium, Mumbai</h3>
               <div class="match-card__time">
                 <time datetime="2024-05-20T20:30">Monday, May 20</time>
                 <time>20:30 pm IST</time>
               </div>
-            </header>
+            </div>
             <div class="match-card__teams">
               <div class="match-card__team">
                 <img class="match-card__team-logo" src="img/live-betting/mumbai-indians.svg" alt="Mumbai Indians" />
@@ -353,15 +344,15 @@
               </div>
             </div>
             <a href="#" class="btn btn--primary">Bet Now</a>
-          </article>
-          <article class="match-card">
-            <header class="match-card__header">
+          </div>
+          <div class="match-card">
+            <div class="match-card__header">
               <h3 class="match-card__venue">M. A. Chidambaram Stadium, Chennai</h3>
               <div class="match-card__time">
                 <time datetime="2024-05-21T19:30">Tuesday, May 21</time>
                 <time>19:30 pm IST</time>
               </div>
-            </header>
+            </div>
             <div class="match-card__teams">
               <div class="match-card__team">
                 <img class="match-card__team-logo" src="img/live-betting/chennai-super-kings.svg" alt="Chennai Super Kings" />
@@ -379,15 +370,15 @@
               </div>
             </div>
             <a href="#" class="btn btn--primary">Bet Now</a>
-          </article>
-          <article class="match-card">
-            <header class="match-card__header">
+          </div>
+          <div class="match-card">
+            <div class="match-card__header">
               <h3 class="match-card__venue">M. Chinnaswamy Stadium, Bangalore</h3>
               <div class="match-card__time">
                 <time datetime="2024-05-22T20:00">Wednesday, May 22</time>
                 <time>20:00 pm IST</time>
               </div>
-            </header>
+            </div>
             <div class="match-card__teams">
               <div class="match-card__team">
                 <img class="match-card__team-logo" src="img/live-betting/royal-challengers.svg" alt="Royal Challengers Bangalore" />
@@ -405,21 +396,21 @@
               </div>
             </div>
             <a href="#" class="btn btn--primary">Bet Now</a>
-          </article>
+          </div>
         </div>
       </section>
 
       <!-- Welcome Bonus -->
       <section class="welcome-bonus" id="bonus" aria-labelledby="bonus-title">
         <div class="welcome-bonus__inner">
-          <header class="welcome-bonus__header">
+          <div class="welcome-bonus__header">
             <h2 id="bonus-title" class="heading heading--2xl heading--bonus">Welcome Bonus</h2>
             <p class="text">
               The IPL betting app offers a user-friendly mobile interface that allows users to place bets anytime,
               anywhere. Enjoy features like secure transactions, detailed match statistics and personalized
               notifications for an immersive and hassle-free betting experience on the go.
             </p>
-          </header>
+          </div>
           <ul class="welcome-bonus__cards">
             <li class="bonus-card">
               <img class="bonus-card__icon" src="img/welcome-bonus/icon-1.png" alt="" aria-hidden="true" />
@@ -455,9 +446,7 @@
       <!-- Reasons -->
       <section class="reasons" id="reasons" aria-labelledby="reasons-title">
         <div class="reasons__inner">
-          <header>
-            <h2 id="reasons-title" class="heading heading--2xl">Reasons to Download IPL App</h2>
-          </header>
+          <h2 id="reasons-title" class="heading heading--2xl">Reasons to Download IPL App</h2>
           <dl class="accordion">
             <div class="accordion__item">
               <dt class="accordion__header">
@@ -555,10 +544,8 @@
               </div>
             </div>
           </figure>
-          <article class="app-features__content">
-            <header>
-              <h2 id="features-title" class="heading heading--2xl">IPL mobile app features</h2>
-            </header>
+          <div class="app-features__content">
+            <h2 id="features-title" class="heading heading--2xl">IPL mobile app features</h2>
             <p class="text">
               The IPL betting app offers a user-friendly mobile interface that allows users to place bets anytime,
               anywhere. Enjoy features like secure transactions, detailed match statistics and personalized
@@ -579,16 +566,14 @@
               </li>
             </ul>
             <a href="#" class="btn btn--primary">Bet Now</a>
-          </article>
+          </div>
         </div>
       </section>
 
       <!-- How To Use -->
       <section class="how-to-use" id="how-to-use" aria-labelledby="how-to-use-title">
         <div class="how-to-use__inner">
-          <header>
-            <h2 id="how-to-use-title" class="heading heading--2xl">How to use our IPL betting app?</h2>
-          </header>
+          <h2 id="how-to-use-title" class="heading heading--2xl">How to use our IPL betting app?</h2>
           <dl class="accordion">
             <div class="accordion__item">
               <dt class="accordion__header">
@@ -638,7 +623,7 @@
 
       <!-- Reviews -->
       <section class="reviews" id="reviews" aria-labelledby="reviews-title">
-        <header class="reviews__header">
+        <div class="reviews__header">
           <h2 id="reviews-title" class="heading heading--2xl">IPL Betting App Reviews</h2>
           <div class="reviews__nav">
             <button class="reviews__nav-btn" aria-label="Previous review">
@@ -648,10 +633,10 @@
               <img src="img/reviews/arrow-next.svg" alt="" aria-hidden="true" />
             </button>
           </div>
-        </header>
+        </div>
         <div class="reviews__slider" data-reviews-slider>
           <div class="reviews__track">
-            <article class="review-card">
+            <div class="review-card">
               <img class="review-card__avatar" src="img/reviews/avatar-1.svg" alt="Rajesh K profile photo" />
               <div class="review-card__content">
                 <div class="review-card__header">
@@ -669,8 +654,8 @@
                   customer support is responsive. Great bonuses too. Very satisfied!
                 </p>
               </div>
-            </article>
-            <article class="review-card">
+            </div>
+            <div class="review-card">
               <img class="review-card__avatar" src="img/reviews/avatar-2.svg" alt="Priya S profile photo" />
               <div class="review-card__content">
                 <div class="review-card__header">
@@ -688,8 +673,8 @@
                   appreciate the fast payouts and seamless betting experience. Highly recommended!
                 </p>
               </div>
-            </article>
-            <article class="review-card">
+            </div>
+            <div class="review-card">
               <div class="review-card__avatar review-card__avatar--placeholder"></div>
               <div class="review-card__content">
                 <div class="review-card__header">
@@ -707,8 +692,8 @@
                   Withdrawals are processed within hours. Definitely my go-to app for IPL season.
                 </p>
               </div>
-            </article>
-            <article class="review-card">
+            </div>
+            <div class="review-card">
               <div class="review-card__avatar review-card__avatar--placeholder"></div>
               <div class="review-card__content">
                 <div class="review-card__header">
@@ -726,8 +711,8 @@
                   IPL matches are unmatched. Customer service resolved my query in minutes.
                 </p>
               </div>
-            </article>
-            <article class="review-card">
+            </div>
+            <div class="review-card">
               <div class="review-card__avatar review-card__avatar--placeholder"></div>
               <div class="review-card__content">
                 <div class="review-card__header">
@@ -745,8 +730,8 @@
                   never lags during live matches. The odds are always competitive. Five stars!
                 </p>
               </div>
-            </article>
-            <article class="review-card">
+            </div>
+            <div class="review-card">
               <div class="review-card__avatar review-card__avatar--placeholder"></div>
               <div class="review-card__content">
                 <div class="review-card__header">
@@ -764,25 +749,34 @@
                   and tips section. Makes betting on IPL matches so much more enjoyable.
                 </p>
               </div>
-            </article>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Platforms (Android & IOS) -->
       <section class="platforms" id="platforms" aria-labelledby="platforms-title">
-        <header class="platforms__header">
+        <div class="platforms__header">
           <h2 id="platforms-title" class="heading heading--2xl">Download IPL win app<br>for Android & IOS</h2>
-        </header>
-        <img class="platforms__image" src="img/platforms/brands.svg" alt="Download on App Store and Google Play" />
+        </div>
+        <div class="platforms__grid">
+          <img src="img/platforms/Group 85054.svg" alt="Huawei" />
+          <img src="img/platforms/Group 85055.svg" alt="Samsung" />
+          <img src="img/platforms/Group 85056.svg" alt="LG" />
+          <img src="img/platforms/Group 85057.svg" alt="Honor" />
+          <img src="img/platforms/Group 85054 (1).svg" alt="Xiaomi" />
+          <img src="img/platforms/Group 85055 (1).svg" alt="Apple" />
+          <img src="img/platforms/Group 85056 (1).svg" alt="Vivo" />
+          <img src="img/platforms/Group 85057 (1).svg" alt="1xBet" />
+        </div>
       </section>
 
       <!-- Information Table -->
       <section class="info-table" id="info" aria-labelledby="info-title">
         <div class="info-table__inner">
-          <header class="info-table__header">
+          <div class="info-table__header">
             <h2 id="info-title" class="heading heading--2xl heading--light">Cricket betting App main information</h2>
-          </header>
+          </div>
           <div class="info-table__content">
             <div class="info-table__rows">
               <div class="info-table__row">
@@ -823,15 +817,15 @@
       <!-- How To Download -->
       <section class="how-to-download" id="prediction" aria-labelledby="prediction-title">
         <div class="how-to-download__inner">
-          <header class="how-to-download__header">
+          <div class="how-to-download__header">
             <h2 id="prediction-title" class="heading heading--2xl">How to download the<br>IPL prediction app?</h2>
             <p class="text">
               The IPL betting app offers a user-friendly mobile interface that allows users to place bets anytime,
               anywhere. Enjoy features like secure transactions, detailed match
             </p>
-          </header>
+          </div>
           <div class="how-to-download__cards">
-            <article class="download-card">
+            <div class="download-card">
               <img class="download-card__image" src="img/how-to-download/android.svg" alt="Android app screenshot" />
               <div class="download-card__content">
                 <h3 class="heading heading--xl">How to download betting app on android?</h3>
@@ -842,8 +836,8 @@
                 </p>
                 <a href="#" class="btn btn--primary btn--wide">Bet Now</a>
               </div>
-            </article>
-            <article class="download-card download-card--reverse">
+            </div>
+            <div class="download-card download-card--reverse">
               <div class="download-card__content">
                 <h3 class="heading heading--xl">How to download an online ipl cricket app on IOS?</h3>
                 <p class="text">
@@ -853,7 +847,7 @@
                 <a href="#" class="btn btn--primary btn--wide">Bet Now</a>
               </div>
               <img class="download-card__image" src="img/how-to-download/ios.png" alt="iOS app screenshot" />
-            </article>
+            </div>
           </div>
         </div>
       </section>
@@ -861,9 +855,9 @@
       <!-- FAQ -->
       <section class="faq" id="faq" aria-labelledby="faq-title">
         <div class="faq__inner">
-          <header class="faq__header">
+          <div class="faq__header">
             <h2 id="faq-title" class="heading heading--2xl">FAQ</h2>
-          </header>
+          </div>
           <dl class="accordion">
             <div class="accordion__item">
               <dt class="accordion__header">
@@ -969,6 +963,7 @@
     <script src="js/reviews-slider.js"></script>
     <script src="js/accordion.js"></script>
     <script src="js/mobile-menu.js"></script>
+    <script src="js/drag-scroll.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

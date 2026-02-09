@@ -1,4 +1,146 @@
 /*
+   RESPONSIVE - TABLET (max-width: 1024px)
+                                                                */
+@media (max-width: 1024px) {
+  :root {
+    --text-3xl: 48px;
+    --text-2xl: 38px;
+    --text-xl: 28px;
+  }
+
+  /* Hero - stack on tablet */
+  .hero {
+    flex-direction: column-reverse;
+    gap: var(--space-xl);
+  }
+
+  .hero__image {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+  }
+
+  /* App Download - stack */
+  .app-download {
+    flex-direction: column-reverse;
+    gap: var(--space-xl);
+  }
+
+  .app-download__image {
+    max-width: 100%;
+  }
+
+  /* App Features - stack */
+  .app-features__inner {
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .app-features__visual {
+    align-self: center;
+    transform: scale(0.7);
+    transform-origin: center top;
+    margin-bottom: -180px;
+  }
+
+  /* Welcome Bonus - stack cards */
+  .welcome-bonus__cards {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .bonus-card {
+    width: 100%;
+  }
+
+  .bonus-card__content {
+    width: 100%;
+  }
+
+  /* Header - burger on tablet */
+  .nav {
+    display: none;
+  }
+
+  .header__cta {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  /* IPL Slider - stack */
+  .ipl-slider__inner {
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  /* Download cards - stack */
+  .download-card {
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .download-card--reverse {
+    flex-direction: column-reverse;
+  }
+
+  .download-card__image {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Main spacing reduction */
+  main {
+    gap: var(--space-3xl);
+    margin-top: var(--space-3xl);
+    margin-bottom: var(--space-3xl);
+  }
+
+  /* IPL visual - center in stacked layout */
+  .ipl-slider__image {
+    max-width: 100%;
+  }
+
+  .ipl-visual {
+    align-self: center;
+  }
+
+  /* Sections - reduce inner padding */
+  .reasons__inner,
+  .how-to-use__inner,
+  .faq__inner {
+    padding: var(--space-3xl) var(--space-xl);
+  }
+
+  .info-table__rows {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .info-table__label {
+    width: 200px;
+  }
+
+  /* Footer - stack on tablet */
+  .footer__content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-lg);
+  }
+
+  .footer__nav {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .footer__links {
+    flex-wrap: wrap;
+    gap: var(--space-sm) var(--space-lg);
+  }
+}
+
+/*
    RESPONSIVE - MOBILE (max-width: 768px)
                                                                 */
 @media (max-width: 768px) {
@@ -13,36 +155,17 @@
     --space-section: 48px;
   }
 
-  body {
-    gap: var(--space-section);
-    padding-bottom: var(--space-section);
-  }
-
   main {
     gap: var(--space-section);
-  }
-
-  .header,
-  .hero,
-  .toc,
-  .ipl-slider,
-  .app-download,
-  .live-betting,
-  .welcome-bonus,
-  .reasons,
-  .app-features,
-  .how-to-use,
-  .reviews,
-  .platforms,
-  .info-table,
-  .how-to-download,
-  .faq,
-  .footer {
-    width: 100%;
-    max-width: 100%;
+    margin-top: var(--space-section);
+    margin-bottom: var(--space-section);
   }
 
   /* Header */
+  .header {
+    padding-top: 0;
+  }
+
   .header__inner {
     flex-direction: row;
     flex-wrap: wrap;
@@ -108,6 +231,8 @@
   /* TOC */
   .toc {
     padding: var(--space-lg) 0;
+    overflow: hidden;
+    max-width: 100%;
   }
 
   .toc__header {
@@ -168,16 +293,6 @@
   .ipl-visual__player {
     width: 280px;
     height: 300px;
-  }
-
-  .ipl-visual__badge--winning {
-    top: 10px;
-    right: -10px;
-    padding: var(--space-sm);
-  }
-
-  .ipl-visual__badge--winning .heading {
-    font-size: var(--text-lg);
   }
 
   .slider__nav {
@@ -304,12 +419,14 @@
   /* Reasons, How-to-use, FAQ */
   .reasons,
   .how-to-use,
+  .info-table,
   .faq {
     padding: 0 var(--content-padding-wide);
   }
 
   .reasons__inner,
   .how-to-use__inner,
+  .info-table__inner,
   .faq__inner {
     width: 100%;
     padding: var(--space-lg);
@@ -370,12 +487,20 @@
     font-size: var(--text-xl);
   }
 
-  /* Info Table */
-  .info-table__inner {
-    padding: var(--space-lg) 0;
+  .platforms__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
   }
 
-  .info-table__header,
+  /* Info Table */
+  .info-table__inner {
+    padding: var(--space-lg);
+  }
+
+  .info-table__header {
+    padding: 0 var(--space-md) var(--space-lg);
+  }
+
   .info-table__content {
     padding: 0 var(--space-md);
   }
@@ -431,8 +556,25 @@
   }
 
   /* Footer */
-  .footer {
-    display: none;
+  .footer__main {
+    padding: var(--space-lg) var(--content-padding);
+  }
+
+  .footer__content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-lg);
+  }
+
+  .footer__nav {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .footer__links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm) var(--space-md);
   }
 }
 
@@ -483,10 +625,6 @@
     height: 260px;
   }
 
-  .ipl-visual__badge--winning {
-    display: none;
-  }
-
   .app-features__visual {
     transform: scale(0.45);
     margin-bottom: -340px;
@@ -506,8 +644,12 @@
     object-fit: contain;
   }
 
+  .platforms__grid {
+    grid-template-columns: 1fr;
+  }
+
   .footer__links {
-    flex-direction: column;
-    gap: var(--space-xs);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xs) var(--space-md);
   }
 }

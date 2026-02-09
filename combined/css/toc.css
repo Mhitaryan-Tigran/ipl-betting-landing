@@ -37,9 +37,11 @@
 }
 
 .toc__row:first-child .chip {
-  width: 252px;
+  flex: 1;
+  min-width: 0;
 }
 
 .toc__row:last-child .chip {
-  width: 206px;
+  flex: 1;
+  min-width: 0;
 }
